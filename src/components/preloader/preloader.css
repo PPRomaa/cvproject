@@ -1,0 +1,38 @@
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slideOut {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
+
+.Preloader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #005cb3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    animation: slideIn 1s ease forwards;
+}
+
+.Preloader-container.hide {
+    animation: slideOut 1s ease forwards;
+}
