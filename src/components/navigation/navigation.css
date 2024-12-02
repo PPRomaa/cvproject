@@ -2,7 +2,6 @@
     display: none;
     height: 100%;
     width: 100%;
-    position: relative;
 }
 
 @keyframes slideIn {
@@ -30,7 +29,7 @@
     position: fixed;
     right: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: #202020;
     z-index: 30;
     display: flex;
@@ -47,29 +46,54 @@
 .Nav-links {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     list-style: none;
     gap: 16px;
-    padding: 100px 0 40px 0;
+    padding: 100px 0 0 0;
     width: 100vh;
     height: fit-content;
 }
 
 .Nav-link {
+    width: fit-content;
+    height: fit-content;
+    white-space:nowrap;
+    text-align: center;
+
     margin: 15px 0;
     font-size: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
 
-.Nav-link a {
+.Nav-link a,li {
+    font-family: 'Courier New', monospace;
     color: #fff;
     text-decoration: none;
     transition: color 0.3s;
 }
 
-.Nav-link a:hover {
-    color: #005cb3;
+.Nav-link.active {
+    position: relative;
+    overflow: hidden; /* Обмежує фон у межах блоку */
+    animation: slideUp 1s ease forwards;
+    background-color: #005cb3;
 }
+
+@keyframes slideUp {
+    0% {
+        width: 20vh;
+        background-color: transparent;
+        transform: scale(0);
+    }
+    100% {
+        width: 50vh;
+        background-color: #005cb3;
+        transform: scale(1);
+    }
+}
+
 .Nav-link.closed{
     color: dimgray;
 }

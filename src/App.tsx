@@ -2,9 +2,9 @@ import React from 'react';
 import { Route, Routes} from "react-router-dom";
 
 import './App.css';
-import {Home} from "./components/home/Home";
-import {About} from "./components/about/About";
-import {Portfolio} from "./components/portfolio/Portfolio";
+import {Home} from "./pages/home/Home";
+import {About} from "./pages/about/About";
+import {Portfolio} from "./pages/portfolio/Portfolio";
 import {Header} from "./components/header/Header";
 import Preloader from "./components/preloader/Preloader";
 import {useVisibility} from "./hooks";

@@ -35,6 +35,7 @@
     z-index: 50;
 }
 .App_logo {
+    font-size: 24px;
     height: 100%;
     width: 100%;
     letter-spacing: 5px;
@@ -77,12 +78,17 @@
     bottom: 0;
 }
 
+.Blue_border.active {
+    height: 100%;
+    bottom: 0;
+}
+
 @media screen and (max-width: 1024px) {
     .App-header_links {
         display: none;
     }
 }
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 720px) {
     .App-wrapper {
         padding: 0 10px;
     }

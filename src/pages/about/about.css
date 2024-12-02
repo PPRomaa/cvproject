@@ -1,0 +1,12 @@
+.about-page {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    padding: 0 40px;
+}
+
+@media (max-width: 720px) {
+    .about-page {
+        padding: 0 20px;
+    }
+}

@@ -1,0 +1,23 @@
+.home-wrapper {
+    height: 100%;
+    overflow: auto;
+    display: flex;
+    flex-direction: row;
+    padding: 0 40px;
+}
+@media screen and (min-width: 1600px) {
+    .home-wrapper {
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 850px) {
+    .home-wrapper {
+        flex-direction: column;
+    }
+}
+@media (max-width: 720px) {
+    .home-wrapper {
+        padding: 0 20px;
+    }
+}

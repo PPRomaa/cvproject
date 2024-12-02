@@ -1,13 +1,31 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 
+import {useVisibility} from "../../hooks";
 import {Navigation} from "../navigation/Navigation";
 import './header.css';
-import {useVisibility} from "../../hooks";
 
+interface IMenu {
+    link: string;
+    title: string;
+    key: number;
+}
+const headerMenuList:IMenu[] = [
+    {
+        link:'/about',
+        title:'About Me',
+        key:0,
+    },
+    {
+        link:'/projects',
+        title:'Portfolio',
+        key:1,
+    }
+]
 
 export const Header: React.FC = () => {
     const {setIsVisible} = useVisibility();
+    const location = useLocation();
 
     return (
         <header className="App-header">
@@ -15,17 +33,18 @@ export const Header: React.FC = () => {
                 <div className="App-wrapper_logo">
                     <Link to={'/'} className="App_logo" onClick={() => setIsVisible(true)}>
                         <span className="tag-color">&lt;</span>
-                        <span>Broomski</span>
+                        <span>Broomsky</span>
                         <span className="tag-color">/&gt;</span>
                     </Link>
                 </div>
                 <ul className="App-header_links">
-                    <li className="App-link"><Link to={'/about'} onClick={() => setIsVisible(true)}>About Me</Link><span className="Blue_border"></span>
-                    </li>
-                    <li className="App-link"><Link to={'/projects'} onClick={() => setIsVisible(true)}>Portfolio</Link><span
-                        className="Blue_border"></span></li>
+                    {headerMenuList.map(({link,title,key})=> (
+                        <li className="App-link" key={key} onClick={() => setIsVisible(true)}>
+                            <Link to={link}>{title}</Link>
+                            <span className={`Blue_border ${location.pathname === link ? 'active' : ''}`}></span>
+                        </li>
+                    ))}
                 </ul>
-
                 <Navigation/>
             </div>
         </header>

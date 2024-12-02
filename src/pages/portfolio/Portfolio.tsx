@@ -2,8 +2,8 @@ import React from "react";
 
 export const Portfolio:React.FC = () => {
     return (
-        <div>
+        <main>
             Portfolio
-        </div>
+        </main>
     )
 }
