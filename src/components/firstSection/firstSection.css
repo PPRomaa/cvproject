@@ -42,6 +42,7 @@
     letter-spacing: 1px;
     opacity: 0;
     animation: fade-in 3s 3s forwards;
+    color: #d4d4d4;
 }
 
 @keyframes cursor {
@@ -122,12 +123,23 @@
     }
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1024px) {
     .info-block, .console-block {
         width: 100%;
     }
+    .info-block {
+        padding-top: 5vh;
+    }
     .first-section {
         flex-direction: column;
+    }
+}
+@media screen and (max-width: 900px) {
+    .info-block {
+        padding-top: 10px;
+    }
+    .console-block {
+        height: 24vh;
     }
 }
 
@@ -135,21 +147,18 @@
     .first-section {
         gap: 5px;
     }
-    .info-block {
-        padding-top: 10px;
-    }
     .title-block h1{
         font-size: 24px;
         letter-spacing: 5px;
-    }
-    .terminal-mockup {
-        /*width: 250px;*/
     }
     .console-block {
         height: 15vh;
     }
     .terminal-mockup {
         overflow-y: scroll;
+    }
+    .body-block {
+        font-size: 12px;
     }
 }
 @media screen and (max-width: 380px) {

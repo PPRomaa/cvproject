@@ -8,13 +8,15 @@
     align-items: center;
     justify-content: center;
     padding-top: 40px;
-    gap: 40px;
 }
 .question-tittle {
     width: 500px;
     height: auto;
-    background: #005cb3;
+    background: linear-gradient(145deg, #1e1e1e, #2c2c2c);
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.5),
+    0 4px 6px rgba(0, 0, 0, 0.6);
     border-radius: 16px;
+    border: 1px solid #3a3a3a;
     font-family: monospace;
     letter-spacing: 4px;
     font-size: 20px;
@@ -29,14 +31,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: 400px;
     height: 300px;
-    background: #005cb3;
+    background: linear-gradient(145deg, #1e1e1e, #2c2c2c);
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.5),
+    0 4px 6px rgba(0, 0, 0, 0.6);
     border-radius: 16px;
+    border: 1px solid #3a3a3a;
     gap: 20px;
+    color: #d4d4d4;
 }
-.question-item-title{
-    background: #fff;
+.question-item-title {
+    background: radial-gradient(circle, #3a3a3a, #1e1e1e);
     height: 150px;
     width: 150px;
     margin-top: 10px;
@@ -44,9 +51,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 .question-item-body {
     font-size: 16px;
-    font-family: monospace;
+    font-family: 'Courier New', monospace;
     letter-spacing: 1px;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    .question-tittle{
+        width: 280px;
+        font-size: 16px;
+    }
 }
