@@ -7,6 +7,7 @@ import {ReactComponent as TypeScriptIcon} from '../../assets/icons/typescript.sv
 import {ReactComponent as GitIcon} from '../../assets/icons/git.svg';
 import {useInView} from "react-intersection-observer";
 
+
 interface SkillsArray {
     title: string;
     subTitle: string;
