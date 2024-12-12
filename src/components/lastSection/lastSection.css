@@ -2,6 +2,13 @@
     height: 100%;
     scroll-snap-align: end;
 }
+.question-main-block{
+    transform: translateX(-1000px);
+    transition: transform 1s ease-in-out;
+}
+.visible {
+    transform: translateX(0);
+}
 .question-block {
     display: flex;
     flex-direction: column;
@@ -20,6 +27,7 @@
     font-family: monospace;
     letter-spacing: 4px;
     font-size: 20px;
+    text-align: center;
 }
 .question-list {
     display: flex;
@@ -40,7 +48,7 @@
     border-radius: 16px;
     border: 1px solid #3a3a3a;
     gap: 20px;
-    color: #d4d4d4;
+    color: #ffffff;
 }
 .question-item-title {
     background: radial-gradient(circle, #3a3a3a, #1e1e1e);

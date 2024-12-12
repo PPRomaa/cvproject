@@ -1,10 +1,11 @@
 import React from "react";
 
 import "./secondSection.css"
-import {ReactComponent as WebstormIcon} from 'icons/webstorm-svgrepo-com.svg';
-import {ReactComponent as JavaScriptIcon} from 'icons/javascript.svg';
-import {ReactComponent as TypeScriptIcon} from 'icons/typescript.svg';
-import {ReactComponent as GitIcon} from 'icons/git.svg';
+import {ReactComponent as WebstormIcon} from '../../assets/icons/webstorm-svgrepo-com.svg';
+import {ReactComponent as JavaScriptIcon} from '../../assets/icons/javascript.svg';
+import {ReactComponent as TypeScriptIcon} from '../../assets/icons/typescript.svg';
+import {ReactComponent as GitIcon} from '../../assets/icons/git.svg';
+import {useInView} from "react-intersection-observer";
 
 interface SkillsArray {
     title: string;
@@ -85,26 +86,31 @@ const arrIcons:IIcons[] = [
 ]
 
 const SecondSection: React.FC = () => {
+    const { ref:leftSection, inView:leftSectionIsVisible } = useInView({triggerOnce: true});
+    const { ref:rightSection, inView:rightSectionIsVisible } = useInView({triggerOnce: true});
+
     return (
         <section className="second-section">
             <div className="icon-section">
-                <div className="icon-items">
+                <div className="icon-items" ref={leftSection}>
                     {arrIcons.map(({title,logo}) => (
-                        <div key={title + logo} className="icon-item">
+                        <div key={title + logo} className={`icon-item ${leftSectionIsVisible ? 'visible' : ''}`}>
                             {logo}
                         </div>
                     ))}
                 </div>
             </div>
-            <div className="skills-section">
-                <h1 className="skills-title">Professional Skills</h1>
-                <ul className="skills-list">
-                    {arrSkills.map(({title, subTitle}) => (
-                        <li key={title + subTitle} className="skills-item">
-                            <strong>{title}:</strong> {subTitle}
-                        </li>
-                    ))}
-                </ul>
+            <div className="skills-section" ref={rightSection}>
+                <div className={`skills-block ${rightSectionIsVisible ? 'visible' : ''}`}>
+                    <h1 className="skills-title">Professional Skills</h1>
+                    <ul className="skills-list">
+                        {arrSkills.map(({title, subTitle}) => (
+                            <li key={title + subTitle} className="skills-item">
+                                <strong>{title}:</strong> {subTitle}
+                            </li>
+                        ))}
+                    </ul>
+                </div>
             </div>
         </section>
     )

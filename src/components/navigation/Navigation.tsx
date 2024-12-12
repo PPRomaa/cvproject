@@ -75,6 +75,12 @@ export const Navigation: React.FC = () => {
         }
     }, [toggle]);
 
+    useEffect(() => {
+        if (!toggle) {
+            setAnimated(false);
+        }
+    }, [toggle]);
+
     return (
         <div className="Nav-Links" ref={navRef}>
             <div className={`hamburger-icon ${toggle ? "active" : ""}`}

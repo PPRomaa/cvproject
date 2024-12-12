@@ -1,8 +1,8 @@
 import React from "react";
 
-import {ReactComponent as LinkedinLogo} from '../../icons/linkedin.svg';
-import {ReactComponent as TelegramLogo} from '../../icons/icons8-telegram.svg';
-import {ReactComponent as GitHubLogo} from '../../icons/github.svg';
+import {ReactComponent as LinkedinLogo} from '../../assets/icons/linkedin.svg';
+import {ReactComponent as TelegramLogo} from '../../assets/icons/icons8-telegram.svg';
+import {ReactComponent as GitHubLogo} from '../../assets/icons/github.svg';
 
 import "./contactStyles.css"
 

@@ -64,11 +64,11 @@
     margin: 15px 0;
     font-size: 1.5rem;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 4px;
 }
 
 .Nav-link a,li {
-    font-family: 'Courier New', monospace;
+    font-family: monospace;
     color: #fff;
     text-decoration: none;
     transition: color 0.3s;
@@ -106,8 +106,17 @@
     z-index: -1;
 }
 .Blue_line.hide {
-    margin-top: 20px;
     bottom: 0;
+    animation: slideDown 2s ease forwards;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(100%);
+    }
 }
 
 .icon-1, .icon-2, .icon-3 {

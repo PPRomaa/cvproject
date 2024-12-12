@@ -1,0 +1,173 @@
+.main-container {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    overflow-y: scroll;
+}
+.main-section {
+    padding: 0 40px;
+}
+.base-title {
+    font-size: clamp(41px, 2.8vw, 70px);
+    letter-spacing: 5px;
+    margin: 30px 0 0 0;
+    white-space: nowrap;
+}
+.projects-container {
+    margin: 40px 0 0 0;
+    padding-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.project-card {
+    display: flex;
+    font-size: 13px;
+    position: relative;
+    width: 422px;
+    height: auto;
+    cursor: default;
+    overflow: visible;
+    border-radius: 20px;
+}
+
+.project-card img {
+    position: relative;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 20px;
+    filter: brightness(.55);
+    z-index: 2;
+}
+
+.project-card-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.project-card-info {
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(20px);
+    opacity: 0;
+    z-index: 2;
+    transition: opacity 0.3s ease;
+    border-radius: 18px;
+}
+
+.blue-block {
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 5px);
+    background: #005cb3;
+    z-index: 1;
+    border-radius: 20px;
+}
+
+.project-card:hover .project-card-info {
+    transition: 0.3s ease-out;
+    opacity: 1;
+}
+.project-card:hover img {
+    filter: brightness(1);
+}
+.project-card:hover .project-card-item {
+    transform: translate(-20px, -10px);
+    box-shadow: 10px 10px 20px #000;
+    transition: 0.3s ease-out;
+}
+.project-card:hover .blue-block {
+    transform: translate(10px, 20px);
+    transition: 0.3s ease-out;
+}
+
+.card-title {
+    color: #dfb842;
+    font-size: 16px;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.card-title span {
+    animation: blink 0.5s step-start infinite;
+}
+
+.link__list {
+    display: flex;
+    gap: 5px;
+    margin-left: 12px;
+}
+.card-description {
+    color: #bdbdbd;
+    margin: 0 12px 20px;
+}
+.card-nav-link {
+    position: relative;
+    padding: 5px 11px 5px 11px;
+    color: inherit;
+    font-size: 14px;
+    text-decoration: none;
+    letter-spacing: 5px;
+}
+
+.blue_line {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background: #005cb3;
+    z-index: -1;
+    transition: height 0.5s ease;
+}
+.card-nav-link:hover .blue_line {
+    height: 100%;
+}
+
+.card-skills {
+    margin: 20px 12px 0 12px;
+}
+.project-card__title {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #005cb3;
+    margin-bottom: 0;
+}
+.project-card__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 5px 20px 5px;
+}
+.project-card__item {
+    font-size: 14px;
+    list-style: none;
+    padding: 5px 15px 2px 15px;
+    margin: 4px 0;
+    border-radius: 20px;
+    background-color: #000;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+@media (max-width: 720px) {
+    .main-section {
+        padding: 0 20px;
+    }
+}
