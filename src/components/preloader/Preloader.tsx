@@ -9,7 +9,7 @@ const Preloader = () => {
 
     useEffect(() => {
         const fakeLoader = new Promise<void>((resolve) => {
-            setTimeout(() => resolve(), 1000);
+            setTimeout(() => resolve(), 600);
         });
 
         fakeLoader.finally(() => {
@@ -21,7 +21,7 @@ const Preloader = () => {
             const time = setTimeout(() => {
                 setIsVisible(false)
                 setShouldRender(false)
-            }, 1000);
+            }, 600);
             return () => clearTimeout(time)
         }
     }, [timer,setIsVisible]);

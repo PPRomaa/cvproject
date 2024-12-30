@@ -30,9 +30,9 @@
     justify-content: center;
     align-items: center;
     z-index: 100;
-    animation: slideIn 1s ease forwards;
+    animation: slideIn 0.7s ease forwards;
 }
 
 .Preloader-container.hide {
-    animation: slideOut 1s ease forwards;
+    animation: slideOut 0.7s ease forwards;
 }
