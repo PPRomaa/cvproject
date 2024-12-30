@@ -19,7 +19,7 @@ const projectsData: ProjectsData[] = [
             'while sharpening my skills in Figma for designing user interfaces. Through this experience, I deepened my' +
             ' understanding of responsive design principles, state management, and component-based architecture,' +
             ' successfully delivering a clean, efficient, and user-friendly application.',
-        url: '/',
+        url: 'https://github.com/PPRomaa/cvproject',
         skills: ['UI/UX', 'TailWind', 'TypeScript', 'NextJS'],
     },
 ]
