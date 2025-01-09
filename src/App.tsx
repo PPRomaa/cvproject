@@ -8,6 +8,7 @@ import {Portfolio} from "./pages/portfolio/Portfolio";
 import {Header} from "./components/header/Header";
 import Preloader from "./components/preloader/Preloader";
 import {useVisibility} from "./hooks";
+import {NotFoundPage} from "./pages/notFound/notFound";
 
 function App() {
     const {isVisible} = useVisibility();
@@ -25,6 +26,7 @@ function App() {
                 <Route path={'/'} element={<Home/>}/>
                 <Route path={'/about'} element={<About/>}/>
                 <Route path={'/projects'} element={<Portfolio/>}/>
+                <Route path={'*'} element={<NotFoundPage/>}/>
             </Routes>
         </div>
     );
