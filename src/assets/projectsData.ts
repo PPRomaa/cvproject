@@ -15,7 +15,7 @@ const projectsData: ProjectsData[] = [
     {
         img: portfolioScreen,
         name: 'Portfolio',
-        desc: 'Perfoming all related tasks of the full development cycle.',
+        desc: 'Performing all related tasks of the full development cycle.',
         link: '/',
         url: 'https://github.com/PPRomaa/cvproject',
         skills: ['UI/UX', 'CSS', 'TypeScript', 'React'],
