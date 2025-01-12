@@ -51,20 +51,21 @@
     list-style: none;
     gap: 16px;
     padding: 100px 0 0 0;
-    width: 100vh;
+    width: 100%;
     height: fit-content;
 }
 
 .Nav-link {
-    width: fit-content;
-    height: fit-content;
     white-space:nowrap;
     text-align: center;
 
+    padding: 12px 14px 12px 19px;
     margin: 15px 0;
     font-size: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 4px;
+
+    position: relative;
 }
 
 .Nav-link a,li {
@@ -76,19 +77,17 @@
 
 .Nav-link.active {
     position: relative;
-    overflow: hidden; /* Обмежує фон у межах блоку */
+    overflow: hidden;
     animation: slideUp 1s ease forwards;
     background-color: #005cb3;
 }
 
 @keyframes slideUp {
     0% {
-        width: 20vh;
         background-color: transparent;
         transform: scale(0);
     }
     100% {
-        width: 50vh;
         background-color: #005cb3;
         transform: scale(1);
     }

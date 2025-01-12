@@ -8,32 +8,35 @@
 
 .name-container{
     font-family: Louis George Caf, sans-serif;
-    font-size: 40px;
+    font-size: clamp(64px,5vw,98px);
     letter-spacing: 10px;
     white-space: nowrap;
     display: flex;
-    gap: 16px;
     align-items: start;
     flex-direction: column;
+    width: 100%;
 }
 .name-container-position{
+    width: 100%;
     color: #005cb3;
     font-family: Louis George Caf, sans-serif;
     font-size: 26px;
     letter-spacing: 4px;
-    margin-bottom: min(6.6vh, 70px);
+    margin-bottom: min(6.6vh, 20px);
     white-space: nowrap;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 850px) {
     .main-name-container{
         width: 100%;
         padding-top: 0;
     }
     .name-container{
-        font-size: clamp(20px, 4vw, 40px);
+        font-size: 42px;
+        margin-bottom: 10px;
     }
     .name-container-position{
-        font-size: clamp(15px, 4vw, 40px)
+        font-size: 21px;
+        margin-bottom: 20px;
     }
 }

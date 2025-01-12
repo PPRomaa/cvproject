@@ -22,6 +22,7 @@
     font-size: 2em;
     font-family: monospace;
     letter-spacing: 1px;
+    margin: 10px 0 10px 0;
 }
 .skills-list {
     display: flex;
