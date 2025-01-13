@@ -7,7 +7,6 @@ import {LastSection} from "../../components/lastSection/LastSection";
 import './about.css'
 
 export const About:React.FC = () => {
-
     return (
         <main className="about-page">
             <FirstSection/>

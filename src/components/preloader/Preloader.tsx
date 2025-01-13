@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import "./preloader.css";
 import {useVisibility} from "../../hooks";
+import "./preloader.css";
 
-const Preloader = () => {
+const Preloader:React.FC = () => {
     const {setIsVisible} = useVisibility();
-    const [shouldRender, setShouldRender] = useState(true);
-    const [timer, setTimer] = useState(false);
+    const [shouldRender, setShouldRender] = useState<boolean>(true);
+    const [timer, setTimer] = useState<boolean>(false);
 
     useEffect(() => {
         const fakeLoader = new Promise<void>((resolve) => {

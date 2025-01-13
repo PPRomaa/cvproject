@@ -36,9 +36,9 @@ export const Navigation: React.FC = () => {
     const location = useLocation();
     const navRef = useRef<HTMLDivElement>(null);
 
-    const [toggle, setToggle] = useState(false);
-    const [animated, setAnimated] = useState(false);
-    const [active, setActive] = useState("");
+    const [toggle, setToggle] = useState<boolean>(false);
+    const [animated, setAnimated] = useState<boolean>(false);
+    const [active, setActive] = useState<string>("");
 
     const handleClickOutside = (event: MouseEvent) => {
         if (navRef.current && !navRef.current.contains(event.target as Node)) {

@@ -1,17 +1,18 @@
 import React from "react";
+import {useInView} from "react-intersection-observer";
 
-import "./secondSection.css"
 import {ReactComponent as WebstormIcon} from '../../assets/icons/webstorm-svgrepo-com.svg';
 import {ReactComponent as JavaScriptIcon} from '../../assets/icons/javascript.svg';
 import {ReactComponent as TypeScriptIcon} from '../../assets/icons/typescript.svg';
 import {ReactComponent as GitIcon} from '../../assets/icons/git.svg';
-import {useInView} from "react-intersection-observer";
 
+import "./secondSection.css"
 
 interface SkillsArray {
     title: string;
     subTitle: string;
-};
+}
+
 interface IIcons {
     title: string;
     logo: JSX.Element;

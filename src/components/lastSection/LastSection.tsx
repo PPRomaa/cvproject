@@ -1,6 +1,7 @@
 import React from "react";
 import {Swiper, SwiperSlide} from 'swiper/react';
 import {Navigation} from 'swiper/modules';
+import {useInView} from "react-intersection-observer";
 
 
 import LinkComponent from "../links/LinkComponent";
@@ -11,7 +12,6 @@ import {ReactComponent as TeamWorkIcon} from '../../assets/icons/team-idea-svgre
 import "./lastSection.css"
 import "swiper/css";
 import "swiper/css/navigation";
-import {useInView} from "react-intersection-observer";
 
 interface QuestionsArr {
     id: number;

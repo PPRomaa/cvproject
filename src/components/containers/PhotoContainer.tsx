@@ -1,7 +1,7 @@
 import React from "react";
 
-import "./containerPhoto.css"
 import image from "../../assets/images/my-image.png"
+import "./containerPhoto.css"
 
 const PhotoContainer:React.FC = () => {
     return (

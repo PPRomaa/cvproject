@@ -1,10 +1,9 @@
 import React from "react";
 
-import "./portfolio.css";
 import projectsData from "../../assets/projectsData"
+import "./portfolio.css";
 
 export const Portfolio: React.FC = () => {
-
     return (
         <main className="main-container">
             <section className="main-section">

@@ -1,8 +1,8 @@
 import React from "react";
 
-import "./home.css"
 import {NameContainer} from "../../components/containers/NameContainer";
 import {PhotoContainer} from "../../components/containers/PhotoContainer";
+import "./home.css"
 
 export const Home:React.FC = () => {
     return (
