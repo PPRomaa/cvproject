@@ -2,35 +2,10 @@ import React, {useEffect, useRef, useState} from "react";
 import {Link, useLocation} from "react-router-dom";
 
 import './navigation.css';
+import {headerMenuList} from "../header/Header";
 import LinkComponent from "../links/LinkComponent";
 
-interface MList {
-    id: number;
-    title: string;
-    path: string;
-    closed: boolean;
-}
 
-const menuList: MList[] = [
-    {
-        id: 0,
-        title: 'About Me',
-        path: 'about',
-        closed: false,
-    },
-    {
-        id: 1,
-        title: 'Portfolio',
-        path: 'projects',
-        closed: false,
-    },
-    {
-        id: 2,
-        title: 'Coming Soon',
-        path: 'empty',
-        closed: true,
-    },
-]
 
 export const Navigation: React.FC = () => {
     const location = useLocation();
@@ -96,13 +71,10 @@ export const Navigation: React.FC = () => {
                 <div className={`Nav-links_list ${toggle ? "active" : ""}`}>
                     <div className={`Blue_line ${animated ? "hide" : ""}`}></div>
                     <ul className="Nav-links">
-                        {menuList.map(({path, closed, title, id}) => (
-                            closed ?
-                                <li className="Nav-link closed" key={id + title}>{title}</li>
-                                :
-                                <li className={`Nav-link ${active === title || location.pathname === `/${path}` ? 'active' : ''}`}
+                        {headerMenuList.map(({link, title, key:id}) => (
+                                <li className={`Nav-link ${active === title || location.pathname === `${link}` ? 'active' : ''}`}
                                     key={id + title}>
-                                    <Link to={`/${path}`} onClick={() => {
+                                    <Link to={link} onClick={() => {
                                         setActive(title)
                                     }}>{title}</Link>
                                 </li>

@@ -148,19 +148,6 @@
     cursor: pointer;
     border-radius: 50%;
     transition: all 0.2s ease-in-out;
-    :hover {
-    .icon-1 {
-       transform: rotate(40deg);
-     }
-     .icon-3 {
-     transform: rotate(-40deg);
-     }
-     .icon-2 {
-     opacity: 0;
-    }
-        transform: scale(1.2);
-        box-shadow: 0 0 30px rgba(0,0,0,0.5);
-    }
 }
 .hamburger-icon.active {
     .icon-1 {

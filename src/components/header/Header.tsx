@@ -10,16 +10,21 @@ interface IMenu {
     title: string;
     key: number;
 }
-const headerMenuList:IMenu[] = [
+export const headerMenuList:IMenu[] = [
     {
         link:'/about',
         title:'About Me',
         key:0,
     },
     {
+        key:1,
         link:'/projects',
         title:'Portfolio',
-        key:1,
+    },
+    {
+        key:2,
+        link:'/contacts',
+        title:'Contact',
     }
 ]
 

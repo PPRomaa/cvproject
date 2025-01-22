@@ -49,15 +49,11 @@ const arrSkills: SkillsArray[] = [
     },
     {
         title: 'Next.js',
-        subTitle: 'Familiar with server-side rendering and optimizing SEO for React applications.'
+        subTitle: 'Familiar with server-side rendering for React applications.'
     },
     {
         title: 'Version Control',
-        subTitle: 'Expertise in Git for collaboration and code management.'
-    },
-    {
-        title: 'Project Management',
-        subTitle: 'Worked in Scrum environments, ensuring timely delivery of sprints and clear communication within a team.'
+        subTitle: 'Great for working with Git.'
     },
     {
         title: 'Backend Familiarity',

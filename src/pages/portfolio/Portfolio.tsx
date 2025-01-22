@@ -1,4 +1,5 @@
 import React from "react";
+import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 
 import projectsData from "../../assets/projectsData"
 import "./portfolio.css";
@@ -9,6 +10,9 @@ export const Portfolio: React.FC = () => {
             <section className="main-section">
                 <h1 className="base-title">Some Works</h1>
                 <div className="projects-container">
+                    <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 666: 2, 1024: 3}}
+                    >
+                        <Masonry gutter={'20px'}>
                     {projectsData.map(({img, name, url, skills, desc, link}, index) => {
                         return (
                             <div key={index + name} className="project-card">
@@ -55,6 +59,8 @@ export const Portfolio: React.FC = () => {
                             </div>
                         );
                     })}
+                        </Masonry>
+                    </ResponsiveMasonry>
                 </div>
             </section>
         </main>
