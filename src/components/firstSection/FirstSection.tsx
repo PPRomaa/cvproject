@@ -11,12 +11,20 @@ const FirstSection: React.FC = () => {
                     <h3>Front-End Developer</h3>
                 </div>
                 <div className="body-block">
-                    <h3>
+                    <h3 className="body-description">
                         <span>I am a Front-end Developer Specialist with over a year of hands-on experience in developing
                         responsive and user-friendly web applications. </span> <span> My journey into programming began with intensive
                         courses at Okten School, where I acquired both foundational and advanced skills that prepared me
                         for the dynamic world of web development.</span> <span> I thrive on challenges and am always eager to explore
                         and adopt new technologies to meet project specifications and enhance user experience.</span>
+                    </h3>
+                </div>
+                <div className="tech-stack-block">
+                    <h1 className="tech-stack-title">
+                        Tech Stack
+                    </h1>
+                    <h3 className="tech-stack-description">
+                        I specialize in JavaScript/TypeScript with a focus on React and Next.js ecosystems.
                     </h3>
                 </div>
             </div>

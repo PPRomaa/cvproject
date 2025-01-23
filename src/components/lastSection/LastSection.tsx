@@ -12,6 +12,7 @@ import {ReactComponent as TeamWorkIcon} from '../../assets/icons/team-idea-svgre
 import "./lastSection.css"
 import "swiper/css";
 import "swiper/css/navigation";
+import {Link} from "react-router-dom";
 
 interface QuestionsArr {
     id: number;
@@ -77,7 +78,10 @@ const LastSection: React.FC = () => {
                         ))}
                     </Swiper>
                 </div>
-                <LinkComponent style={{justifyContent: "center", paddingTop: "20px"}}/>
+                <div className="contact-block-body">
+                    <Link to={'/contacts'} className="contact-block__btn">Contact me</Link>
+                </div>
+                <LinkComponent style={{justifyContent: "center", paddingTop: "15px"}}/>
             </div>
         </section>
     )

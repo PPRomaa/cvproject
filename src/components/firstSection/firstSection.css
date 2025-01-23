@@ -1,7 +1,6 @@
 .first-section {
     height: 100%;
     width: 100%;
-    scroll-snap-align: start;
     display: flex;
     flex-direction: row;
     gap: 20px;
@@ -43,6 +42,24 @@
     letter-spacing: 1px;
     opacity: 0;
     animation: fade-in 3s 3s forwards;
+    color: #d4d4d4;
+}
+.tech-stack-block {
+    display: flex;
+    flex-direction: column;
+
+    font-family: monospace;
+    letter-spacing: 1px;
+    opacity: 0;
+    animation: fade-in 3s 3s forwards;
+}
+.tech-stack-title {
+    letter-spacing: 5px;
+    font-size: 1.5em;
+    margin-bottom: 0;
+}
+.tech-stack-description {
+    font-size: 1em;
     color: #d4d4d4;
 }
 

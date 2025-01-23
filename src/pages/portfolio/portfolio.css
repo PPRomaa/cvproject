@@ -169,4 +169,13 @@
         padding: 0 20px;
     }
 }
+@media (max-width: 500px) {
+    .project-card:hover .project-card-item {
+        transform: translate(0px, -10px);
+        box-shadow: 0 10px 20px #000;
+    }
+    .project-card:hover .blue-block {
+        transform: translate(0px, 20px);
+    }
+}
 
