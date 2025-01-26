@@ -38,7 +38,7 @@ export const Header: React.FC = () => {
                 <div className="App-wrapper_logo">
                     <Link to={'/'} className="App_logo" onClick={() => setIsVisible(true)}>
                         <span className="tag-color">&lt;</span>
-                        <span>Broomsky</span>
+                        <span>PPRoman</span>
                         <span className="tag-color">/&gt;</span>
                     </Link>
                 </div>
