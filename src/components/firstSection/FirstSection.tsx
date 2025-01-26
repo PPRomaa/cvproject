@@ -1,8 +1,18 @@
-import React from "react";
+import React,{ useEffect, useState } from "react";
+import Globe from "react-globe.gl";
 
 import "./firstSection.css"
 
 const FirstSection: React.FC = () => {
+    const [showGlobe, setShowGlobe] = useState(false)
+
+    useEffect(() => {
+        const timer = setTimeout(() => setShowGlobe(true), 2500);
+        return () => {
+            clearTimeout(timer);
+        }
+    }, []);
+
     return (
         <section className="first-section">
             <div className="info-block">
@@ -46,6 +56,34 @@ const FirstSection: React.FC = () => {
                         </code>
                     </div>
                 </div>
+            </div>
+            <div className="globe-block">
+                <div className="globe-description">
+                    <h1>I work remotely across most timezones</h1>
+                    <h3>Now i'm based in Slovakia, with remote work available.</h3>
+                </div>
+                {showGlobe ? (
+                    <Globe
+                        height={326}
+                        width={326}
+                        backgroundColor="rgba(0,0,0,0)"
+                        showAtmosphere
+                        showGraticules
+                        globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
+                        bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
+                        labelsData={[
+                            {
+                                lat: 48.6,
+                                lng: 19.5,
+                                text: "I'm here!",
+                                color: "white",
+                                size: 20,
+                            },
+                        ]}
+                    />
+                ) : (
+                    <div>Loading globe...</div>
+                )}
             </div>
         </section>
     )

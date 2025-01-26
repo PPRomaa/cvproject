@@ -1,9 +1,13 @@
 .first-section {
-    height: 100%;
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     gap: 20px;
+    margin-bottom: 140px;
+}
+.first-section > * {
+    flex: 1 1 calc(50% - 10px);
+    box-sizing: border-box;
 }
 
 .info-block {
@@ -35,6 +39,7 @@
     opacity: 0;
     animation: fade-in 2s 2s forwards;
 }
+
 .body-block h3{
     font-family: monospace;
     display: flex;
@@ -53,12 +58,34 @@
     opacity: 0;
     animation: fade-in 3s 3s forwards;
 }
-.tech-stack-title {
+.tech-stack-title{
     letter-spacing: 5px;
     font-size: 1.5em;
     margin-bottom: 0;
 }
 .tech-stack-description {
+    font-size: 1em;
+    color: #d4d4d4;
+}
+
+.globe-block {
+    width: 100%;
+    height: fit-content;
+    background: #1e1e1e;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    animation: fade-in 3s 3s forwards;
+}
+.globe-description {
+    font-family: monospace;
+}
+.globe-description h3{
     font-size: 1em;
     color: #d4d4d4;
 }
@@ -126,10 +153,30 @@
     line-height: 1.5;
 }
 
-@media screen and (max-height: 650px) {
-    .first-section {
-        gap: 5px;
+
+
+@media screen and (max-width: 1024px) {
+    .info-block, .console-block {
+        width: 100%;
     }
+    .info-block {
+        padding-top: 5vh;
+    }
+}
+@media screen and (max-width: 900px) {
+    .info-block {
+        padding-top: 10px;
+    }
+    .globe-block {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 0 20px 10px 20px;
+    }
+    .console-block {
+        padding-top: 5vh;
+    }
+}
+@media screen and (max-height: 650px) {
     .info-block,.console-block {
         padding-top: 0;
     }
@@ -141,39 +188,20 @@
     }
 }
 
-@media screen and (max-width: 1024px) {
-    .info-block, .console-block {
-        width: 100%;
-    }
-    .info-block {
-        padding-top: 5vh;
-    }
-    .first-section {
-        flex-direction: column;
-    }
-}
-@media screen and (max-width: 900px) {
-    .info-block {
-        padding-top: 10px;
-    }
-    .console-block {
-        height: 24vh;
-    }
-}
-
 @media screen and (max-width: 500px) {
     .first-section {
         gap: 5px;
+        margin-bottom: 40px;
     }
     .title-block h1{
         font-size: 24px;
         letter-spacing: 5px;
     }
-    .console-block {
-        height: 15vh;
-    }
     .terminal-mockup {
         overflow-y: scroll;
+    }
+    .globe-block {
+        margin-top: 5vh;
     }
     .body-block {
         font-size: 12px;
