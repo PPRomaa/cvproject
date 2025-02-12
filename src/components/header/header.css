@@ -48,9 +48,9 @@
     align-self: center;
     position: relative;
     margin: 5px;
+    padding: 5px 11px 5px 11px;
 }
 .App-link, .App_logo {
-    /*list-style: none;*/
     font-family: "Gill Sans", sans-serif;
 }
 .App-link a, .App_logo {

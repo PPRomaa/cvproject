@@ -1,5 +1,24 @@
-.container-section {
+.bad-request-section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+    width: 100%;
+    height: 100%;
+    background-color: #202020;
+
     display: flex;
     justify-content: center;
-    padding: 50px 0 50px 0;
+    align-items: center;
+    flex-direction: column;
+
+    gap: 15px;
+
+    font-family: "Indie Flower", serif;
+}
+.bad-request-section_btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

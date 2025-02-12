@@ -1,0 +1,138 @@
+.console-block {
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    padding-top: 10vh;
+    width: 50%;
+    margin-bottom: 60px;
+}
+.terminal-mockup {
+    width: 500px;
+    background: #1e1e1e;
+    border-radius: 10px;
+    color: #00ff00;
+    font-family: monospace;
+    padding: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    animation: fade-in 3s 3s forwards;
+}
+.terminal-header {
+    display: flex;
+    justify-content: start;
+    padding: 10px;
+    background: #2e2e2e;
+    border-radius: 10px 10px 0 0;
+}
+.terminal-header .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+.terminal-header .dot.red {
+    background: #ff5f56;
+}
+.terminal-header .dot.yellow {
+    background: #ffbd2e;
+}
+.terminal-header .dot.green {
+    background: #27c93f;
+}
+.terminal-body {
+    padding: 20px 10px 0 10px;
+    color: #dcdcdc;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+.faq-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.faq-item {
+    position: relative;
+    cursor: pointer;
+    padding: 3px;
+    transition: background 0.3s ease;
+}
+
+.faq-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.faq-question {
+    width: 90%;
+    margin: 0;
+    font-size: 18px;
+}
+.arrow-icon {
+    position: absolute;
+    top: 7px;
+    right: 5px;
+    width: 15px;
+    height: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+.arrow-icon.rotate {
+    transform: rotate(180deg);
+}
+
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    color: #dcdcdc;
+
+}
+
+.faq-answer.active {
+    max-height: 200px;
+    opacity: 1;
+}
+@media screen and (max-width: 1200px) {
+    .console-block {
+        padding-top: 20px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .console-block {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 900px) {
+    .console-block {
+        padding-top: 5vh;
+        margin-bottom: 30px;
+    }
+}
+@media screen and (max-height: 650px) {
+    .console-block {
+        padding-top: 0;
+    }
+    .console-block {
+        height: fit-content;
+    }
+    .terminal-mockup {
+        overflow-y: scroll;
+    }
+}
+@media screen and (max-width: 500px) {
+    .terminal-mockup {
+        overflow-y: scroll;
+    }
+    .body-block {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 380px) {
+    .console-block {
+        padding-top: 0;
+    }
+}

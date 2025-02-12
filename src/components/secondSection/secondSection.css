@@ -3,7 +3,6 @@
     display: flex;
     flex-direction: row;
     gap: 20px;
-    padding: 5px 0;
     margin-bottom: 40px;
 }
 
@@ -38,6 +37,8 @@
     display: block;
     text-align: start;
     padding-top: 2px;
+    font-family: monospace;
+    color: #d4d4d4;
 }
 .skills-item strong {
     color: #005cb3;

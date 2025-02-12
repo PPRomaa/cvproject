@@ -2,7 +2,9 @@ import React from "react";
 import {Swiper, SwiperSlide} from 'swiper/react';
 import {Navigation} from 'swiper/modules';
 import {useInView} from "react-intersection-observer";
+import {Link} from "react-router-dom";
 
+import {useVisibility} from "../../hooks";
 
 import LinkComponent from "../links/LinkComponent";
 import {ReactComponent as HandShakeIcon} from '../../assets/icons/handshake-svgrepo-com.svg';
@@ -12,7 +14,6 @@ import {ReactComponent as TeamWorkIcon} from '../../assets/icons/team-idea-svgre
 import "./lastSection.css"
 import "swiper/css";
 import "swiper/css/navigation";
-import {Link} from "react-router-dom";
 
 interface QuestionsArr {
     id: number;
@@ -40,6 +41,7 @@ const questionsArray: QuestionsArr[] = [
 
 const LastSection: React.FC = () => {
     const {ref: leftSection, inView: leftSectionIsVisible} = useInView({triggerOnce: true});
+    const {setIsVisible} = useVisibility();
 
     return (
         <section className="last-section" ref={leftSection}>
@@ -78,7 +80,7 @@ const LastSection: React.FC = () => {
                         ))}
                     </Swiper>
                 </div>
-                <div className="contact-block-body">
+                <div className="contact-block-body" onClick={() => setIsVisible(true)}>
                     <Link to={'/contacts'} className="contact-block__btn">Contact me</Link>
                 </div>
                 <LinkComponent style={{justifyContent: "center", paddingTop: "15px"}}/>

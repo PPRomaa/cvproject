@@ -44,8 +44,8 @@ export const Header: React.FC = () => {
                 </div>
                 <ul className="App-header_links">
                     {headerMenuList.map(({link,title,key})=> (
-                        <li className="App-link" key={key} onClick={() => setIsVisible(true)}>
-                            <Link to={link}>{title}</Link>
+                        <li className="App-link" key={key}>
+                            <Link to={link} onClick={() => setIsVisible(true)}>{title}</Link>
                             <span className={`Blue_border ${location.pathname === link ? 'active' : ''}`}></span>
                         </li>
                     ))}

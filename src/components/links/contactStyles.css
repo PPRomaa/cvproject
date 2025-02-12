@@ -36,7 +36,8 @@
     top: -20px;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 14px;
+    font-family: "Indie Flower", serif;
+    font-size: 15px;
     color: #005cb3;
     opacity: 0;
     visibility: hidden;

@@ -1,7 +1,8 @@
-import React,{ useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 import Globe from "react-globe.gl";
 
 import "./firstSection.css"
+import {QuestionsContainer} from "../questionsContainer/QuestionsContainer";
 
 const FirstSection: React.FC = () => {
     const [showGlobe, setShowGlobe] = useState(false)
@@ -34,33 +35,17 @@ const FirstSection: React.FC = () => {
                         Tech Stack
                     </h1>
                     <h3 className="tech-stack-description">
-                        I specialize in JavaScript/TypeScript with a focus on React and Next.js ecosystems.
+                        I specialize in JavaScript/TypeScript with a focus on React and Next.js ecosystems. In the
+                        future, I would like to work more with React Native projects and become an expert in iOS
+                        development.
                     </h3>
                 </div>
             </div>
-            <div className="console-block">
-                <div className="terminal-mockup">
-                    <div className="terminal-header">
-                        <span className="dot red"></span>
-                        <span className="dot yellow"></span>
-                        <span className="dot green"></span>
-                    </div>
-                    <div className="terminal-body">
-                        <code>
-                            $npx create-developer --name="Roman Popadynets"<br/>
-                            [INFO]: Initializing...<br/>
-                            [INFO]: Loading Front-end knowledge...<br/>
-                            [INFO]: Adding teamwork skills and commercial experience...<br/>
-                            <br/>
-                            [SUCCESS]: Developer profile ready!<br/>
-                        </code>
-                    </div>
-                </div>
-            </div>
+            <QuestionsContainer />
             <div className="globe-block">
                 <div className="globe-description">
                     <h1>I work remotely across most timezones</h1>
-                    <h3>Now i'm based in Slovakia, with remote work available.</h3>
+                    <h3>Now i'm based in Slovakia, with remote work available.✅</h3>
                 </div>
                 {showGlobe ? (
                     <Globe
@@ -71,6 +56,7 @@ const FirstSection: React.FC = () => {
                         showGraticules
                         globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
                         bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
+
                         labelsData={[
                             {
                                 lat: 48.6,

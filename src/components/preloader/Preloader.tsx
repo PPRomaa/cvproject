@@ -9,7 +9,7 @@ const Preloader:React.FC = () => {
 
     useEffect(() => {
         const fakeLoader = new Promise<void>((resolve) => {
-            setTimeout(() => resolve(), 600);
+            setTimeout(() => resolve(), 700);
         });
 
         fakeLoader.finally(() => {
@@ -21,7 +21,7 @@ const Preloader:React.FC = () => {
             const time = setTimeout(() => {
                 setIsVisible(false)
                 setShouldRender(false)
-            }, 600);
+            }, 800);
             return () => clearTimeout(time)
         }
     }, [timer,setIsVisible]);
@@ -31,8 +31,7 @@ const Preloader:React.FC = () => {
     return (
         <>
             {shouldRender && (
-                <div className={`Preloader-container ${timer ? "hide" : ""}`}>
-
+                <div className={`Preloader-container`}>
                 </div>
             )}
         </>

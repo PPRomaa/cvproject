@@ -7,7 +7,6 @@
 }
 
 .name-container{
-    font-family: Louis George Caf, sans-serif;
     font-size: clamp(64px,5vw,98px);
     letter-spacing: 10px;
     white-space: nowrap;
@@ -19,7 +18,6 @@
 .name-container-position{
     width: 100%;
     color: #005cb3;
-    font-family: Louis George Caf, sans-serif;
     font-size: 26px;
     letter-spacing: 4px;
     margin-bottom: min(6.6vh, 20px);
