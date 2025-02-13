@@ -1,6 +1,6 @@
 {
   "short_name": "Look up !",
-  "name": "Look up !",
+  "name": "Look up!",
   "icons": [
     {
       "src": "favicon.ico",
@@ -23,7 +23,7 @@
       "type": "image/png"
     }
   ],
-  "start_url": "/mvp",
+  "start_url": ".",
   "display": "standalone",
   "theme_color": "#202020",
   "background_color": "#202020"

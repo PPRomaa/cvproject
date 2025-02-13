@@ -2,8 +2,8 @@
     display: flex;
     flex-direction: column;
     width: 50%;
-    align-items: start;
-    padding-top: 50px;
+    justify-content: center;
+    margin-bottom: 125px;
 }
 
 .name-container{
@@ -27,10 +27,10 @@
 @media screen and (max-width: 850px) {
     .main-name-container{
         width: 100%;
-        padding-top: 0;
+        margin-bottom: 0;
     }
     .name-container{
-        font-size: 42px;
+        font-size: 38px;
         margin-bottom: 10px;
     }
     .name-container-position{
