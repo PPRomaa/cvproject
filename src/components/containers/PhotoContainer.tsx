@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-import './containerPhoto.css';
+import './containerPhoto.css'
 
 const PhotoContainer: React.FC = () => {
     return (
@@ -9,7 +9,7 @@ const PhotoContainer: React.FC = () => {
                 <div className="photo-container"></div>
             </div>
         </section>
-    );
-};
+    )
+}
 
-export { PhotoContainer };
+export { PhotoContainer }

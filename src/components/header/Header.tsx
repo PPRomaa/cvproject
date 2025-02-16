@@ -1,14 +1,14 @@
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React from 'react'
+import { Link, useLocation } from 'react-router-dom'
 
-import { useVisibility } from '../../hooks';
-import { Navigation } from '../navigation/Navigation';
-import './header.css';
+import { useVisibility } from '../../hooks'
+import { Navigation } from '../navigation/Navigation'
+import './header.css'
 
 interface IMenu {
-    link: string;
-    title: string;
-    key: number;
+    link: string
+    title: string
+    key: number
 }
 export const headerMenuList: IMenu[] = [
     {
@@ -26,11 +26,11 @@ export const headerMenuList: IMenu[] = [
         link: '/contacts',
         title: 'Contact',
     },
-];
+]
 
 export const Header: React.FC = () => {
-    const { setIsVisible } = useVisibility();
-    const location = useLocation();
+    const { setIsVisible } = useVisibility()
+    const location = useLocation()
 
     return (
         <header className="App-header">
@@ -61,5 +61,5 @@ export const Header: React.FC = () => {
                 <Navigation />
             </div>
         </header>
-    );
-};
+    )
+}

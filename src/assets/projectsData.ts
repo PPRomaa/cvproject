@@ -1,13 +1,13 @@
-import UWERX from './images/UWERX - screenShot.jpg';
-import portfolioScreen from './images/Portfolio - screenShot.png';
+import UWERX from './images/UWERX - screenShot.jpg'
+import portfolioScreen from './images/Portfolio - screenShot.png'
 
 interface ProjectsData {
-    img: string;
-    name: string;
-    desc: string;
-    url?: string;
-    link?: string;
-    skills: string[];
+    img: string
+    name: string
+    desc: string
+    url?: string
+    link?: string
+    skills: string[]
 }
 
 const projectsData: ProjectsData[] = [
@@ -31,6 +31,6 @@ const projectsData: ProjectsData[] = [
         url: '',
         skills: ['UI/UX', 'TailWind', 'TypeScript', 'NextJS', 'Redux Toolkit'],
     },
-];
+]
 
-export default projectsData;
+export default projectsData

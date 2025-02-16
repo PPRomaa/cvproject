@@ -1,19 +1,19 @@
-import React from 'react';
+import React from 'react'
 
-import { ReactComponent as LinkedinLogo } from '../../assets/icons/linkedin.svg';
-import { ReactComponent as TelegramLogo } from '../../assets/icons/icons8-telegram.svg';
-import { ReactComponent as GitHubLogo } from '../../assets/icons/github.svg';
-import { ReactComponent as InstagramLogo } from '../../assets/icons/instagram-logo.svg';
+import { ReactComponent as LinkedinLogo } from '../../assets/icons/linkedin.svg'
+import { ReactComponent as TelegramLogo } from '../../assets/icons/icons8-telegram.svg'
+import { ReactComponent as GitHubLogo } from '../../assets/icons/github.svg'
+import { ReactComponent as InstagramLogo } from '../../assets/icons/instagram-logo.svg'
 
-import './contactStyles.css';
+import './contactStyles.css'
 
 interface LinkProps {
-    style?: React.CSSProperties;
+    style?: React.CSSProperties
 }
 interface LinkState {
-    title: string;
-    link: string;
-    logo: JSX.Element;
+    title: string
+    link: string
+    logo: JSX.Element
 }
 
 const arr: LinkState[] = [
@@ -37,7 +37,7 @@ const arr: LinkState[] = [
         link: 'https://www.instagram.com/popadynets.roman',
         logo: <InstagramLogo />,
     },
-];
+]
 
 const LinkComponent: React.FC<LinkProps> = ({ style }) => {
     return (
@@ -51,7 +51,7 @@ const LinkComponent: React.FC<LinkProps> = ({ style }) => {
                 </div>
             ))}
         </div>
-    );
-};
+    )
+}
 
-export default LinkComponent;
+export default LinkComponent

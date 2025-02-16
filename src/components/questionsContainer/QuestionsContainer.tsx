@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 
-import './questionsContainer.css';
-import { ReactComponent as Arrow } from '../../assets/icons/arrow-svg.svg';
+import './questionsContainer.css'
+import { ReactComponent as Arrow } from '../../assets/icons/arrow-svg.svg'
 
 interface IQuestions {
-    question: string;
-    answer: string;
+    question: string
+    answer: string
 }
 
 const questionsList: IQuestions[] = [
@@ -33,14 +33,14 @@ const questionsList: IQuestions[] = [
         question: 'How do you optimize the performance of React apps?',
         answer: 'I use memoization (React.memo, useMemo, useCallback), rendering optimization, code splitting, and lazy loading to improve performance.',
     },
-];
+]
 
 const QuestionsContainer: React.FC = () => {
-    const [activeIndex, setActiveIndex] = useState<number | null>(null);
+    const [activeIndex, setActiveIndex] = useState<number | null>(null)
 
     const handleClick = (index: number) => {
-        setActiveIndex(activeIndex === index ? null : index);
-    };
+        setActiveIndex(activeIndex === index ? null : index)
+    }
 
     return (
         <div className="console-block">
@@ -75,7 +75,7 @@ const QuestionsContainer: React.FC = () => {
                 </div>
             </div>
         </div>
-    );
-};
+    )
+}
 
-export { QuestionsContainer };
+export { QuestionsContainer }

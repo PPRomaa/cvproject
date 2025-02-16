@@ -1,1 +1,1 @@
-export * from './VisibilityContext';
+export * from './VisibilityContext'

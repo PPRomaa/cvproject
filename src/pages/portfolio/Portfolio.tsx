@@ -1,8 +1,8 @@
-import React from 'react';
-import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
+import React from 'react'
+import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
 
-import projectsData from '../../assets/projectsData';
-import './portfolio.css';
+import projectsData from '../../assets/projectsData'
+import './portfolio.css'
 
 export const Portfolio: React.FC = () => {
     return (
@@ -17,7 +17,7 @@ export const Portfolio: React.FC = () => {
                             {projectsData.map(
                                 (
                                     { img, name, url, skills, desc, link },
-                                    index,
+                                    index
                                 ) => {
                                     return (
                                         <div
@@ -70,7 +70,7 @@ export const Portfolio: React.FC = () => {
                                                                 {skills.map(
                                                                     (
                                                                         skill,
-                                                                        i,
+                                                                        i
                                                                     ) => (
                                                                         <li
                                                                             key={
@@ -82,7 +82,7 @@ export const Portfolio: React.FC = () => {
                                                                                 skill
                                                                             }
                                                                         </li>
-                                                                    ),
+                                                                    )
                                                                 )}
                                                             </ul>
                                                         </div>
@@ -91,13 +91,13 @@ export const Portfolio: React.FC = () => {
                                             </div>
                                             <div className="blue-block"></div>
                                         </div>
-                                    );
-                                },
+                                    )
+                                }
                             )}
                         </Masonry>
                     </ResponsiveMasonry>
                 </div>
             </section>
         </main>
-    );
-};
+    )
+}

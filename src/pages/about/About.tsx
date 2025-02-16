@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react'
 
-import { FirstSection } from '../../components/firstSection/FirstSection';
-import { SecondSection } from '../../components/secondSection/SecondSection';
-import { LastSection } from '../../components/lastSection/LastSection';
+import { FirstSection } from '../../components/firstSection/FirstSection'
+import { SecondSection } from '../../components/secondSection/SecondSection'
+import { LastSection } from '../../components/lastSection/LastSection'
 
-import './about.css';
+import './about.css'
 
 export const About: React.FC = () => {
     return (
@@ -13,5 +13,5 @@ export const About: React.FC = () => {
             <SecondSection />
             <LastSection />
         </main>
-    );
-};
+    )
+}

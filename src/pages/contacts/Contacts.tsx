@@ -1,21 +1,21 @@
-import React from 'react';
-import { useFormik, FormikHelpers } from 'formik';
-import emailjs from '@emailjs/browser';
+import React from 'react'
+import { useFormik, FormikHelpers } from 'formik'
+import emailjs from '@emailjs/browser'
 
-import LinkComponent from '../../components/links/LinkComponent';
-import { basicSchema } from '../../schemas';
+import LinkComponent from '../../components/links/LinkComponent'
+import { basicSchema } from '../../schemas'
 
-import './contacts.css';
+import './contacts.css'
 
 type ContactValues = {
-    name: string;
-    email: string;
-    message: string;
-};
+    name: string
+    email: string
+    message: string
+}
 
 const onSubmit = async (
     values: ContactValues,
-    actions: FormikHelpers<ContactValues>,
+    actions: FormikHelpers<ContactValues>
 ) => {
     try {
         await emailjs.send(
@@ -28,14 +28,14 @@ const onSubmit = async (
                 to_email: 'popadinets.roman1@gmail.com',
                 message: values.message,
             },
-            'gf_X0ljaMYjZ4cGqf',
-        );
-        alert('Your message has been sent!');
+            'gf_X0ljaMYjZ4cGqf'
+        )
+        alert('Your message has been sent!')
     } catch (e) {
-        console.log(e);
+        console.log(e)
     }
-    actions.resetForm();
-};
+    actions.resetForm()
+}
 
 const Contacts: React.FC = () => {
     const {
@@ -54,7 +54,7 @@ const Contacts: React.FC = () => {
         },
         validationSchema: basicSchema,
         onSubmit,
-    });
+    })
 
     return (
         <section className="contact-body">
@@ -137,6 +137,6 @@ const Contacts: React.FC = () => {
                 <LinkComponent style={{ justifyContent: 'center' }} />
             </div>
         </section>
-    );
-};
-export { Contacts };
+    )
+}
+export { Contacts }

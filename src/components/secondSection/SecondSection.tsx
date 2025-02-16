@@ -1,21 +1,21 @@
-import React from 'react';
-import { useInView } from 'react-intersection-observer';
+import React from 'react'
+import { useInView } from 'react-intersection-observer'
 
-import { ReactComponent as WebstormIcon } from '../../assets/icons/webstorm-svgrepo-com.svg';
-import { ReactComponent as JavaScriptIcon } from '../../assets/icons/javascript.svg';
-import { ReactComponent as TypeScriptIcon } from '../../assets/icons/typescript.svg';
-import { ReactComponent as GitIcon } from '../../assets/icons/git.svg';
+import { ReactComponent as WebstormIcon } from '../../assets/icons/webstorm-svgrepo-com.svg'
+import { ReactComponent as JavaScriptIcon } from '../../assets/icons/javascript.svg'
+import { ReactComponent as TypeScriptIcon } from '../../assets/icons/typescript.svg'
+import { ReactComponent as GitIcon } from '../../assets/icons/git.svg'
 
-import './secondSection.css';
+import './secondSection.css'
 
 interface SkillsArray {
-    title: string;
-    subTitle: string;
+    title: string
+    subTitle: string
 }
 
 interface IIcons {
-    title: string;
-    logo: JSX.Element;
+    title: string
+    logo: JSX.Element
 }
 
 const arrSkills: SkillsArray[] = [
@@ -70,7 +70,7 @@ const arrSkills: SkillsArray[] = [
         title: 'English Proficiency',
         subTitle: 'Upper-Intermediate level',
     },
-];
+]
 const arrIcons: IIcons[] = [
     {
         title: 'JavaScriptIcon',
@@ -88,15 +88,15 @@ const arrIcons: IIcons[] = [
         title: 'GitIcon',
         logo: <GitIcon />,
     },
-];
+]
 
 const SecondSection: React.FC = () => {
     const { ref: leftSection, inView: leftSectionIsVisible } = useInView({
         triggerOnce: true,
-    });
+    })
     const { ref: rightSection, inView: rightSectionIsVisible } = useInView({
         triggerOnce: true,
-    });
+    })
 
     return (
         <section className="second-section">
@@ -127,7 +127,7 @@ const SecondSection: React.FC = () => {
                 </div>
             </div>
         </section>
-    );
-};
+    )
+}
 
-export { SecondSection };
+export { SecondSection }

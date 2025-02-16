@@ -1,58 +1,58 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useEffect, useRef, useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 
-import './navigation.css';
-import { headerMenuList } from '../header/Header';
-import LinkComponent from '../links/LinkComponent';
+import './navigation.css'
+import { headerMenuList } from '../header/Header'
+import LinkComponent from '../links/LinkComponent'
 
 export const Navigation: React.FC = () => {
-    const location = useLocation();
-    const navRef = useRef<HTMLDivElement>(null);
+    const location = useLocation()
+    const navRef = useRef<HTMLDivElement>(null)
 
-    const [toggle, setToggle] = useState<boolean>(false);
-    const [animated, setAnimated] = useState<boolean>(false);
-    const [active, setActive] = useState<string>('');
+    const [toggle, setToggle] = useState<boolean>(false)
+    const [animated, setAnimated] = useState<boolean>(false)
+    const [active, setActive] = useState<string>('')
 
     const handleClickOutside = (event: MouseEvent) => {
         if (navRef.current && !navRef.current.contains(event.target as Node)) {
-            setToggle(false);
+            setToggle(false)
         }
-    };
+    }
 
     useEffect(() => {
-        document.addEventListener('mousedown', handleClickOutside);
+        document.addEventListener('mousedown', handleClickOutside)
 
         return () => {
-            document.removeEventListener('mousedown', handleClickOutside);
-        };
-    }, []);
+            document.removeEventListener('mousedown', handleClickOutside)
+        }
+    }, [])
 
     useEffect(() => {
         if (active !== '') {
             const timer = setInterval(() => {
-                setActive('');
-                setToggle(false);
-            }, 1000);
+                setActive('')
+                setToggle(false)
+            }, 1000)
             return () => {
-                clearInterval(timer);
-            };
+                clearInterval(timer)
+            }
         }
-    }, [active]);
+    }, [active])
 
     useEffect(() => {
         if (toggle) {
             const timer = setTimeout(() => {
-                setAnimated(true);
-            }, 100);
-            return () => clearTimeout(timer);
+                setAnimated(true)
+            }, 100)
+            return () => clearTimeout(timer)
         }
-    }, [toggle]);
+    }, [toggle])
 
     useEffect(() => {
         if (!toggle) {
-            setAnimated(false);
+            setAnimated(false)
         }
-    }, [toggle]);
+    }, [toggle])
 
     return (
         <div className="Nav-Links" ref={navRef}>
@@ -81,7 +81,7 @@ export const Navigation: React.FC = () => {
                                 <Link
                                     to={link}
                                     onClick={() => {
-                                        setActive(title);
+                                        setActive(title)
                                     }}
                                 >
                                     {title}
@@ -99,5 +99,5 @@ export const Navigation: React.FC = () => {
                 </div>
             )}
         </div>
-    );
-};
+    )
+}

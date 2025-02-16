@@ -1,13 +1,13 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Link } from 'react-router-dom'
 
-import { useVisibility } from '../../hooks';
-import { CirclePreloader } from '../../components/preloader/Circle-preloader';
+import { useVisibility } from '../../hooks'
+import { CirclePreloader } from '../../components/preloader/Circle-preloader'
 
-import './notFound.css';
+import './notFound.css'
 
 const NotFoundPage: React.FC = () => {
-    const { setIsVisible } = useVisibility();
+    const { setIsVisible } = useVisibility()
 
     return (
         <div className={'bad-request-section'}>
@@ -27,7 +27,7 @@ const NotFoundPage: React.FC = () => {
                 <h3>Please try again)</h3>
             </div>
         </div>
-    );
-};
+    )
+}
 
-export { NotFoundPage };
+export { NotFoundPage }

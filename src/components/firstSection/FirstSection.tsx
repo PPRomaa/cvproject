@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from 'react';
-import Globe from 'react-globe.gl';
+import React, { useEffect, useState } from 'react'
+import Globe from 'react-globe.gl'
 
-import './firstSection.css';
-import { QuestionsContainer } from '../questionsContainer/QuestionsContainer';
+import './firstSection.css'
+import { QuestionsContainer } from '../questionsContainer/QuestionsContainer'
 
 const FirstSection: React.FC = () => {
-    const [showGlobe, setShowGlobe] = useState(false);
+    const [showGlobe, setShowGlobe] = useState(false)
 
     useEffect(() => {
-        const timer = setTimeout(() => setShowGlobe(true), 2500);
+        const timer = setTimeout(() => setShowGlobe(true), 2500)
         return () => {
-            clearTimeout(timer);
-        };
-    }, []);
+            clearTimeout(timer)
+        }
+    }, [])
 
     return (
         <section className="first-section">
@@ -86,7 +86,7 @@ const FirstSection: React.FC = () => {
                 )}
             </div>
         </section>
-    );
-};
+    )
+}
 
-export { FirstSection };
+export { FirstSection }

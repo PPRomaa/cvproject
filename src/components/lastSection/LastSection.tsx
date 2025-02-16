@@ -1,24 +1,24 @@
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
-import { useInView } from 'react-intersection-observer';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Navigation } from 'swiper/modules'
+import { useInView } from 'react-intersection-observer'
+import { Link } from 'react-router-dom'
 
-import { useVisibility } from '../../hooks';
+import { useVisibility } from '../../hooks'
 
-import LinkComponent from '../links/LinkComponent';
-import { ReactComponent as HandShakeIcon } from '../../assets/icons/handshake-svgrepo-com.svg';
-import { ReactComponent as LightBulbIcon } from '../../assets/icons/light-bulb-13-svgrepo-com.svg';
-import { ReactComponent as TeamWorkIcon } from '../../assets/icons/team-idea-svgrepo-com.svg';
+import LinkComponent from '../links/LinkComponent'
+import { ReactComponent as HandShakeIcon } from '../../assets/icons/handshake-svgrepo-com.svg'
+import { ReactComponent as LightBulbIcon } from '../../assets/icons/light-bulb-13-svgrepo-com.svg'
+import { ReactComponent as TeamWorkIcon } from '../../assets/icons/team-idea-svgrepo-com.svg'
 
-import './lastSection.css';
-import 'swiper/css';
-import 'swiper/css/navigation';
+import './lastSection.css'
+import 'swiper/css'
+import 'swiper/css/navigation'
 
 interface QuestionsArr {
-    id: number;
-    icon: JSX.Element | string;
-    question: string;
+    id: number
+    icon: JSX.Element | string
+    question: string
 }
 
 const questionsArray: QuestionsArr[] = [
@@ -40,13 +40,13 @@ const questionsArray: QuestionsArr[] = [
         question:
             'I’m always ready to take on new opportunities and contribute to innovative solutions in the web development space.',
     },
-];
+]
 
 const LastSection: React.FC = () => {
     const { ref: leftSection, inView: leftSectionIsVisible } = useInView({
         triggerOnce: true,
-    });
-    const { setIsVisible } = useVisibility();
+    })
+    const { setIsVisible } = useVisibility()
 
     return (
         <section className="last-section" ref={leftSection}>
@@ -107,7 +107,7 @@ const LastSection: React.FC = () => {
                 />
             </div>
         </section>
-    );
-};
+    )
+}
 
-export { LastSection };
+export { LastSection }
