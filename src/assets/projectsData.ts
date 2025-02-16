@@ -1,6 +1,5 @@
-import UWERX from "./images/UWERX - screenShot.jpg";
-import portfolioScreen from "./images/Portfolio - screenShot.png";
-
+import UWERX from './images/UWERX - screenShot.jpg';
+import portfolioScreen from './images/Portfolio - screenShot.png';
 
 interface ProjectsData {
     img: string;
@@ -23,7 +22,8 @@ const projectsData: ProjectsData[] = [
     {
         img: UWERX,
         name: 'UWERX',
-        desc: 'Worked a fully functional website. This project enhanced my proficiency in modern web technologies such as ' +
+        desc:
+            'Worked a fully functional website. This project enhanced my proficiency in modern web technologies such as ' +
             'Next.js, TypeScript, and Tailwind CSS, ' +
             'Through this experience, I deepened my' +
             ' understanding of responsive design principles, state management, and component-based architecture,' +
@@ -31,6 +31,6 @@ const projectsData: ProjectsData[] = [
         url: '',
         skills: ['UI/UX', 'TailWind', 'TypeScript', 'NextJS', 'Redux Toolkit'],
     },
-]
+];
 
 export default projectsData;

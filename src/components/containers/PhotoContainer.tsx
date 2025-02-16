@@ -1,16 +1,15 @@
-import React from "react";
+import React from 'react';
 
-import "./containerPhoto.css"
+import './containerPhoto.css';
 
-const PhotoContainer:React.FC = () => {
+const PhotoContainer: React.FC = () => {
     return (
         <section className="main-photo-container">
             <div className="photo-section">
-                <div className="photo-container">
-                </div>
+                <div className="photo-container"></div>
             </div>
         </section>
-    )
-}
+    );
+};
 
-export  {PhotoContainer};
+export { PhotoContainer };
