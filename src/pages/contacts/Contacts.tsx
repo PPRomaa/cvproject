@@ -70,8 +70,7 @@ const Contacts: React.FC = () => {
                 <form
                     onSubmit={handleSubmit}
                     autoComplete={'off'}
-                    className="contact-form-body"
-                >
+                    className="contact-form-body">
                     <label className="form-label">
                         <span>Full Name</span>
                         <input
@@ -129,8 +128,7 @@ const Contacts: React.FC = () => {
                     <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="form-btn"
-                    >
+                        className="form-btn">
                         {isSubmitting ? 'Sending...' : 'Send Message'}
                     </button>
                 </form>

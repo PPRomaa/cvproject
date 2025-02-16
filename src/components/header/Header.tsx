@@ -39,8 +39,7 @@ export const Header: React.FC = () => {
                     <Link
                         to={'/'}
                         className="App_logo"
-                        onClick={() => setIsVisible(true)}
-                    >
+                        onClick={() => setIsVisible(true)}>
                         <span className="tag-color">&lt;</span>
                         <span>PPRoman</span>
                         <span className="tag-color">/&gt;</span>
@@ -53,8 +52,7 @@ export const Header: React.FC = () => {
                                 {title}
                             </Link>
                             <span
-                                className={`Blue_border ${location.pathname === link ? 'active' : ''}`}
-                            ></span>
+                                className={`Blue_border ${location.pathname === link ? 'active' : ''}`}></span>
                         </li>
                     ))}
                 </ul>

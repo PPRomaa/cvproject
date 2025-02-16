@@ -18,8 +18,7 @@ const NotFoundPage: React.FC = () => {
             <div className={'bad-request-section_btn'}>
                 <div
                     className="contact-block-body"
-                    onClick={() => setIsVisible(true)}
-                >
+                    onClick={() => setIsVisible(true)}>
                     <Link to={'/'} className="contact-block__btn">
                         Home
                     </Link>

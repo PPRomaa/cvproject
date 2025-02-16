@@ -11,8 +11,7 @@ export const Portfolio: React.FC = () => {
                 <h1 className="base-title">Some Works</h1>
                 <div className="projects-container">
                     <ResponsiveMasonry
-                        columnsCountBreakPoints={{ 350: 1, 666: 2, 1024: 3 }}
-                    >
+                        columnsCountBreakPoints={{ 350: 1, 666: 2, 1024: 3 }}>
                         <Masonry gutter={'20px'}>
                             {projectsData.map(
                                 (
@@ -22,8 +21,7 @@ export const Portfolio: React.FC = () => {
                                     return (
                                         <div
                                             key={index + name}
-                                            className="project-card"
-                                        >
+                                            className="project-card">
                                             <div className="project-card-item">
                                                 <img src={img} alt={name} />
                                                 <div className="project-card-info">
@@ -42,8 +40,7 @@ export const Portfolio: React.FC = () => {
                                                                     href={url}
                                                                     target="_blank"
                                                                     rel="noopener noreferrer"
-                                                                    className="card-nav-link"
-                                                                >
+                                                                    className="card-nav-link">
                                                                     Code
                                                                     <span className="blue_line"></span>
                                                                 </a>
@@ -54,8 +51,7 @@ export const Portfolio: React.FC = () => {
                                                                     href={link}
                                                                     target="_blank"
                                                                     rel="noopener noreferrer"
-                                                                    className="card-nav-link"
-                                                                >
+                                                                    className="card-nav-link">
                                                                     Site
                                                                     <span className="blue_line"></span>
                                                                 </a>
@@ -76,8 +72,7 @@ export const Portfolio: React.FC = () => {
                                                                             key={
                                                                                 i
                                                                             }
-                                                                            className="project-card__item"
-                                                                        >
+                                                                            className="project-card__item">
                                                                             {
                                                                                 skill
                                                                             }

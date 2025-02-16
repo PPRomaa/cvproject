@@ -105,8 +105,7 @@ const SecondSection: React.FC = () => {
                     {arrIcons.map(({ title, logo }) => (
                         <div
                             key={title + logo}
-                            className={`icon-item ${leftSectionIsVisible ? 'visible' : ''}`}
-                        >
+                            className={`icon-item ${leftSectionIsVisible ? 'visible' : ''}`}>
                             {logo}
                         </div>
                     ))}
@@ -114,8 +113,7 @@ const SecondSection: React.FC = () => {
             </div>
             <div className="skills-section" ref={rightSection}>
                 <div
-                    className={`skills-block ${rightSectionIsVisible ? 'visible' : ''}`}
-                >
+                    className={`skills-block ${rightSectionIsVisible ? 'visible' : ''}`}>
                     <h1 className="skills-title">Professional Skills</h1>
                     <ul className="skills-list">
                         {arrSkills.map(({ title, subTitle }) => (

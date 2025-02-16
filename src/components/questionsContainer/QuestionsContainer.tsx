@@ -56,8 +56,7 @@ const QuestionsContainer: React.FC = () => {
                             <li
                                 key={index}
                                 className="faq-item"
-                                onClick={() => handleClick(index)}
-                            >
+                                onClick={() => handleClick(index)}>
                                 <h6 className="faq-question">
                                     {question}{' '}
                                     <Arrow
@@ -65,8 +64,7 @@ const QuestionsContainer: React.FC = () => {
                                     />
                                 </h6>
                                 <p
-                                    className={`faq-answer ${activeIndex === index ? 'active' : ''}`}
-                                >
+                                    className={`faq-answer ${activeIndex === index ? 'active' : ''}`}>
                                     {answer}
                                 </p>
                             </li>

@@ -59,8 +59,7 @@ export const Navigation: React.FC = () => {
             <div
                 className={`hamburger-icon ${toggle ? 'active' : ''}`}
                 id="icon"
-                onClick={() => setToggle((prev) => !prev)}
-            >
+                onClick={() => setToggle((prev) => !prev)}>
                 <div className="icon-1" id="a"></div>
                 <div className="icon-2" id="b"></div>
                 <div className="icon-3" id="c"></div>
@@ -70,20 +69,17 @@ export const Navigation: React.FC = () => {
             {toggle && (
                 <div className={`Nav-links_list ${toggle ? 'active' : ''}`}>
                     <div
-                        className={`Blue_line ${animated ? 'hide' : ''}`}
-                    ></div>
+                        className={`Blue_line ${animated ? 'hide' : ''}`}></div>
                     <ul className="Nav-links">
                         {headerMenuList.map(({ link, title, key: id }) => (
                             <li
                                 className={`Nav-link ${active === title || location.pathname === `${link}` ? 'active' : ''}`}
-                                key={id + title}
-                            >
+                                key={id + title}>
                                 <Link
                                     to={link}
                                     onClick={() => {
                                         setActive(title)
-                                    }}
-                                >
+                                    }}>
                                     {title}
                                 </Link>
                             </li>

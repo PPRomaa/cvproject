@@ -51,8 +51,7 @@ const LastSection: React.FC = () => {
     return (
         <section className="last-section" ref={leftSection}>
             <div
-                className={`question-main-block ${leftSectionIsVisible ? 'visible' : ''}`}
-            >
+                className={`question-main-block ${leftSectionIsVisible ? 'visible' : ''}`}>
                 <div className="question-block">
                     <div className="question-tittle">
                         <h1>Why Choose Me?</h1>
@@ -70,8 +69,7 @@ const LastSection: React.FC = () => {
                             800: {
                                 slidesPerView: 3,
                             },
-                        }}
-                    >
+                        }}>
                         {questionsArray.map(({ icon, question, id }) => (
                             <SwiperSlide
                                 key={id}
@@ -80,8 +78,7 @@ const LastSection: React.FC = () => {
                                     justifyContent: 'center',
                                     alignItems: 'center',
                                     paddingTop: '20px',
-                                }}
-                            >
+                                }}>
                                 <div className="question-list-item">
                                     <div className="question-item-title">
                                         {icon}
@@ -96,8 +93,7 @@ const LastSection: React.FC = () => {
                 </div>
                 <div
                     className="contact-block-body"
-                    onClick={() => setIsVisible(true)}
-                >
+                    onClick={() => setIsVisible(true)}>
                     <Link to={'/contacts'} className="contact-block__btn">
                         Contact me
                     </Link>
