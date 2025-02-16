@@ -27,7 +27,7 @@ const arrSkills: SkillsArray[] = [
     {
         title: 'CSS Frameworks',
         subTitle:
-            'Experienced with Tailwind CSS and BEM methodology to ensure efficient and scalable styling.',
+            'Experienced with Tailwind CSS, BEM methodology, and Material UI to ensure efficient and scalable styling.',
     },
     {
         title: 'Design Collaboration',
@@ -62,9 +62,15 @@ const arrSkills: SkillsArray[] = [
         subTitle: 'Great for working with Git.',
     },
     {
+        title: 'ESLint & Prettier',
+        subTitle:
+            'Experienced in using ESLint for maintaining code quality and consistency, and Prettier for automatic code formatting to ensure clean, readable code across projects.\n' +
+            '\n',
+    },
+    {
         title: 'Backend Familiarity',
         subTitle:
-            'Basic knowledge of MongoDB, enabling me to collaborate effectively with backend teams.',
+            'Basic knowledge of node and databases, such as MongoDB,MySQL, enabling me to collaborate effectively with backend teams.',
     },
     {
         title: 'English Proficiency',
