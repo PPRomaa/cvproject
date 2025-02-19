@@ -51,13 +51,13 @@ const LastSection: React.FC = () => {
     return (
         <section className="last-section" ref={leftSection}>
             <div
-                className={`question-main-block ${leftSectionIsVisible ? 'visible' : ''}`}>
-                <div className="question-block">
-                    <div className="question-tittle">
+                className={`main-question__section ${leftSectionIsVisible ? 'visible' : ''}`}>
+                <div className="main-question__block">
+                    <div className="main-question__tittle">
                         <h1>Why Choose Me?</h1>
                     </div>
                 </div>
-                <div className="question-list">
+                <div className="main-question__list">
                     <Swiper
                         modules={[Navigation]}
                         slidesPerView={1}
@@ -78,12 +78,13 @@ const LastSection: React.FC = () => {
                                     justifyContent: 'center',
                                     alignItems: 'center',
                                     paddingTop: '20px',
+                                    paddingBottom: '20px',
                                 }}>
-                                <div className="question-list-item">
-                                    <div className="question-item-title">
+                                <div className="question-list__item">
+                                    <div className="question-item__title">
                                         {icon}
                                     </div>
-                                    <div className="question-item-body">
+                                    <div className="question-item__body">
                                         {question}
                                     </div>
                                 </div>
@@ -92,7 +93,7 @@ const LastSection: React.FC = () => {
                     </Swiper>
                 </div>
                 <div
-                    className="contact-block-body"
+                    className="contact-block__body"
                     onClick={() => setIsVisible(true)}>
                     <Link to={'/contacts'} className="contact-block__btn">
                         Contact me

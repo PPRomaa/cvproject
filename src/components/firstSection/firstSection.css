@@ -4,6 +4,7 @@
     flex-wrap: wrap;
     gap: 20px;
     margin-bottom: 90px;
+    font-family: "Poppins", serif;
 }
 .first-section > * {
     flex: 1 1 calc(50% - 10px);
@@ -20,18 +21,23 @@
     display: inline-block;
     width: fit-content;
 }
-.title-block h1{
-    font-size: 2em;
-    letter-spacing: 10px;
-    font-family: monospace;
-    border-right: 5px solid;
+.title-block__name{
+    display: flex;
     width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
     animation: typing 2s steps(17), cursor .4s step-end alternate;
 }
-.title-block h3{
-    font-family: monospace;
+.title-block__name > h1 {
+    font-size: 2em;
+    letter-spacing: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.title-block__name > span {
+    font-size: 2em;
+    animation: blink 1s step-start infinite;
+    animation-delay: 2s;
+}
+.title-block__position{
     font-size: 1em;
     color: #005cb3;
     width: 100%;
@@ -40,30 +46,31 @@
     animation: fade-in 2s 2s forwards;
 }
 
-.body-block h3{
-    font-family: monospace;
+.first-section__body {
     display: flex;
     flex-direction: column;
-    letter-spacing: 1px;
     opacity: 0;
     animation: fade-in 3s 3s forwards;
+}
+.first-section__body-description {
+    font-size: 1em;
+    letter-spacing: 1px;
     color: #d4d4d4;
 }
-.tech-stack-block {
+.first-section__tech-stack {
     display: flex;
     flex-direction: column;
 
-    font-family: monospace;
     letter-spacing: 1px;
     opacity: 0;
     animation: fade-in 3s 3s forwards;
 }
-.tech-stack-title{
+.first-section__tech-stack-title{
     letter-spacing: 5px;
     font-size: 1.5em;
     margin-bottom: 0;
 }
-.tech-stack-description {
+.first-section__tech-stack-description {
     font-size: 1em;
     color: #d4d4d4;
 }
@@ -83,9 +90,8 @@
     animation: fade-in 3s 3s forwards;
 }
 .globe-description {
-    font-family: monospace;
 }
-.globe-description h3{
+.globe-description > h3{
     font-size: 1em;
     color: #d4d4d4;
 }
@@ -134,22 +140,22 @@
         gap: 5px;
         margin-bottom: 40px;
     }
-    .title-block h1{
+    .title-block__name > h1{
         font-size: 24px;
         letter-spacing: 5px;
     }
     .globe-block {
         margin-top: 5vh;
     }
-    .body-block {
+    .first-section__body, .first-section__tech-stack-description {
         font-size: 12px;
     }
 }
 @media screen and (max-width: 380px) {
-    .title-block h1{
+    .title-block__name > h1,.title-block__name > span, .first-section__tech-stack-title{
         font-size: 16px;
     }
-    .title-block h3{
+    .title-block__position > h3{
         font-size: 12px;
     }
     .info-block{

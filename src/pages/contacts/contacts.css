@@ -18,7 +18,6 @@
 .contact-talk-container {
     display: flex;
     flex-direction: column;
-    font-family: monospace;
 }
 
 .contact-talk-container h3 {
@@ -45,7 +44,6 @@
 }
 .form-label span{
     font-size: 0.80rem;
-    font-family: monospace;
     color: #d4d4d4;
 }
 

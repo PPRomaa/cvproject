@@ -12,7 +12,6 @@ interface SkillsArray {
     title: string
     subTitle: string
 }
-
 interface IIcons {
     title: string
     logo: JSX.Element
@@ -107,11 +106,11 @@ const SecondSection: React.FC = () => {
     return (
         <section className="second-section">
             <div className="icon-section">
-                <div className="icon-items" ref={leftSection}>
+                <div className="icon-section__items" ref={leftSection}>
                     {arrIcons.map(({ title, logo }) => (
                         <div
                             key={title + logo}
-                            className={`icon-item ${leftSectionIsVisible ? 'visible' : ''}`}>
+                            className={`icon-section__item ${leftSectionIsVisible ? 'visible' : ''}`}>
                             {logo}
                         </div>
                     ))}
@@ -119,11 +118,15 @@ const SecondSection: React.FC = () => {
             </div>
             <div className="skills-section" ref={rightSection}>
                 <div
-                    className={`skills-block ${rightSectionIsVisible ? 'visible' : ''}`}>
-                    <h1 className="skills-title">Professional Skills</h1>
-                    <ul className="skills-list">
+                    className={`skills-section__block ${rightSectionIsVisible ? 'visible' : ''}`}>
+                    <h1 className="skills-section__title">
+                        Professional Skills
+                    </h1>
+                    <ul className="skills-section__list">
                         {arrSkills.map(({ title, subTitle }) => (
-                            <li key={title + subTitle} className="skills-item">
+                            <li
+                                key={title + subTitle}
+                                className="skills-list__item">
                                 <strong>{title}:</strong> {subTitle}
                             </li>
                         ))}
