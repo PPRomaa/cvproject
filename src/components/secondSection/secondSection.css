@@ -62,7 +62,7 @@
     opacity: 1;
     transition: opacity 1.2s;
 }
-.active svg{
+.touched svg{
     filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.8));
     transition: filter 0.3s ease-in-out;
 }

@@ -162,7 +162,7 @@ const SecondSection: React.FC = () => {
                         {arrIcons.map(({title, logo}) => (
                             <div
                                 key={title + logo}
-                                className={`icon-section__item ${leftSectionIsVisible ? 'visible' : ''} ${active === title ? 'active' : ''}`}>
+                                className={`icon-section__item ${leftSectionIsVisible ? 'visible' : ''} ${active === title ? 'touched' : ''}`}>
                                 {logo}
                             </div>
                         ))}
