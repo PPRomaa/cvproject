@@ -140,7 +140,7 @@
         gap: 5px;
         margin-bottom: 40px;
     }
-    .title-block__name > h1{
+    .title-block__name > h1,.title-block__name > span {
         font-size: 24px;
         letter-spacing: 5px;
     }

@@ -3,11 +3,11 @@
     margin-bottom: 30px;
 }
 .main-question__section{
-    transform: translateX(-1000px);
-    transition: transform 1s ease-in-out;
+    opacity: 0;
 }
 .visible {
-    transform: translateX(0);
+    opacity: 1;
+    transition: opacity 1.2s;
 }
 .main-question__block {
     display: flex;

@@ -1,16 +1,24 @@
-import React from 'react'
-import { useInView } from 'react-intersection-observer'
+import React, {useState} from 'react'
+import {useInView} from 'react-intersection-observer'
+import Marquee from "react-fast-marquee";
 
-import { ReactComponent as WebstormIcon } from '../../assets/icons/webstorm-svgrepo-com.svg'
-import { ReactComponent as JavaScriptIcon } from '../../assets/icons/javascript.svg'
-import { ReactComponent as TypeScriptIcon } from '../../assets/icons/typescript.svg'
-import { ReactComponent as GitIcon } from '../../assets/icons/git.svg'
+import {ReactComponent as WebstormIcon} from '../../assets/icons/webstorm-svgrepo-com.svg'
+import {ReactComponent as JavaScriptIcon} from '../../assets/icons/javascript.svg'
+import {ReactComponent as TypeScriptIcon} from '../../assets/icons/typescript.svg'
+import {ReactComponent as GitIcon} from '../../assets/icons/git.svg'
+import {ReactComponent as MuiIcon} from '../../assets/icons/material-ui-svgrepo-com.svg'
+import {ReactComponent as NextIcon} from '../../assets/icons/nextjs-icon-svgrepo-com.svg'
+import {ReactComponent as NodeIcon} from '../../assets/icons/nodejs-icon.svg'
+import {ReactComponent as ReactIcon} from '../../assets/icons/react-svgrepo-com.svg'
+import {ReactComponent as TailwindIcon} from '../../assets/icons/tailwind-svgrepo-com.svg'
+import {ReactComponent as EslintIcon} from '../../assets/icons/eslint-icon.svg'
 
 import './secondSection.css'
 
 interface SkillsArray {
     title: string
-    subTitle: string
+    subTitle?: string
+    description?: string
 }
 interface IIcons {
     title: string
@@ -20,101 +28,146 @@ interface IIcons {
 const arrSkills: SkillsArray[] = [
     {
         title: 'HTML5, CSS3, and SASS',
-        subTitle:
+        subTitle:'TailwindIcon',
+        description:
             'Proficient in writing clean, maintainable styles with a strong understanding of modern layouts, accessibility, and responsive design.',
     },
     {
         title: 'CSS Frameworks',
-        subTitle:
+        subTitle:'MuiIcon',
+        description:
             'Experienced with Tailwind CSS, BEM methodology, and Material UI to ensure efficient and scalable styling.',
     },
     {
         title: 'Design Collaboration',
-        subTitle:
+        subTitle:'TailwindIcon',
+        description:
             'Familiar with tools like Figma for interpreting design specifications and delivering pixel-perfect implementations.',
     },
     {
         title: 'JavaScript (ES6+)',
-        subTitle:
+        subTitle:'JavaScriptIcon',
+        description:
             'Solid understanding of modern JavaScript concepts, including promises, async/await, and DOM manipulation.',
     },
     {
         title: 'React',
-        subTitle:
+        subTitle:'ReactIcon',
+        description:
             'Skilled in creating interactive components using React with features like Hooks, React Router, and state management using Redux and Redux Toolkit.',
     },
     {
         title: 'React Native',
-        subTitle: 'Capable of developing cross-platform mobile applications.',
+        subTitle:'ReactIcon',
+        description: 'Capable of developing cross-platform mobile applications.',
     },
     {
         title: 'TypeScript',
-        subTitle:
+        subTitle:'TypeScriptIcon',
+        description:
             'Experienced in ensuring type safety and reducing bugs in large codebases.',
     },
     {
         title: 'Next.js',
-        subTitle: 'Familiar with server-side rendering for React applications.',
+        subTitle:'NextIcon',
+        description: 'Familiar with server-side rendering for React applications.',
     },
     {
         title: 'Version Control',
-        subTitle: 'Great for working with Git.',
+        subTitle:'GitIcon',
+        description: 'Great for working with Git.',
     },
     {
         title: 'ESLint & Prettier',
-        subTitle:
+        subTitle:'EslintIcon',
+        description:
             'Experienced in using ESLint for maintaining code quality and consistency, and Prettier for automatic code formatting to ensure clean, readable code across projects.\n' +
             '\n',
     },
     {
         title: 'Backend Familiarity',
-        subTitle:
+        subTitle:'NodeIcon',
+        description:
             'Basic knowledge of node and databases, such as MongoDB,MySQL, enabling me to collaborate effectively with backend teams.',
     },
     {
         title: 'English Proficiency',
-        subTitle: 'Upper-Intermediate level',
+        description: 'Upper-Intermediate level',
     },
 ]
 const arrIcons: IIcons[] = [
     {
-        title: 'JavaScriptIcon',
-        logo: <JavaScriptIcon />,
-    },
-    {
         title: 'TypeScriptIcon',
-        logo: <TypeScriptIcon />,
+        logo: <TypeScriptIcon/>,
     },
     {
         title: 'WebstormIcon',
-        logo: <WebstormIcon />,
+        logo: <WebstormIcon/>,
     },
     {
         title: 'GitIcon',
-        logo: <GitIcon />,
+        logo: <GitIcon/>,
+    },
+    {
+        title: 'JavaScriptIcon',
+        logo: <JavaScriptIcon/>,
+    },
+    {
+        title: 'MuiIcon',
+        logo: <MuiIcon/>
+    },
+    {
+        title: 'NodeIcon',
+        logo: <NodeIcon/>
+    },
+    {
+        title: 'ReactIcon',
+        logo: <ReactIcon/>
+    },
+    {
+        title: 'NextIcon',
+        logo: <NextIcon/>
+    },
+    {
+        title: 'TailwindIcon',
+        logo: <TailwindIcon/>
+    },
+    {
+        title: 'EslintIcon',
+        logo: <EslintIcon/>
     },
 ]
 
 const SecondSection: React.FC = () => {
-    const { ref: leftSection, inView: leftSectionIsVisible } = useInView({
+    const {ref: leftSection, inView: leftSectionIsVisible} = useInView({
         triggerOnce: true,
     })
-    const { ref: rightSection, inView: rightSectionIsVisible } = useInView({
+    const {ref: rightSection, inView: rightSectionIsVisible} = useInView({
         triggerOnce: true,
     })
+    const [active, setActive] = useState<string>('');
 
+
+    const handleOnMove = (subtitle:string) => {
+        setActive(subtitle)
+    }
+    const handleOnLeave = () => {
+        setActive('');
+    }
     return (
         <section className="second-section">
-            <div className="icon-section">
-                <div className="icon-section__items" ref={leftSection}>
-                    {arrIcons.map(({ title, logo }) => (
-                        <div
-                            key={title + logo}
-                            className={`icon-section__item ${leftSectionIsVisible ? 'visible' : ''}`}>
-                            {logo}
-                        </div>
-                    ))}
-                </div>
+            <div className="icon-section" ref={leftSection}>
+                <Marquee autoFill pauseOnHover speed={80}>
+                    <div className="icon-section__items">
+                        {arrIcons.map(({title, logo}) => (
+                            <div
+                                key={title + logo}
+                                className={`icon-section__item ${leftSectionIsVisible ? 'visible' : ''} ${active === title ? 'active' : ''}`}>
+                                {logo}
+                            </div>
+                        ))}
+                    </div>
+                </Marquee>
             </div>
             <div className="skills-section" ref={rightSection}>
                 <div
@@ -123,11 +176,13 @@ const SecondSection: React.FC = () => {
                         Professional Skills
                     </h1>
                     <ul className="skills-section__list">
-                        {arrSkills.map(({ title, subTitle }) => (
+                        {arrSkills.map(({title, description,subTitle}) => (
                             <li
+                                onMouseEnter={() => handleOnMove(subTitle ? subTitle : '')}
+                                onMouseLeave={handleOnLeave}
                                 key={title + subTitle}
                                 className="skills-list__item">
-                                <strong>{title}:</strong> {subTitle}
+                                <strong>{title}:</strong> {description}
                             </li>
                         ))}
                     </ul>
@@ -137,4 +192,4 @@ const SecondSection: React.FC = () => {
     )
 }
 
-export { SecondSection }
+export {SecondSection}

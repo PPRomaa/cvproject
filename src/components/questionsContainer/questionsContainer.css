@@ -1,7 +1,6 @@
 .console-block {
     display: flex;
-    justify-content: center;
-    height: fit-content;
+    justify-content: end;
     padding-top: 10vh;
     width: 50%;
     margin-bottom: 60px;
@@ -95,19 +94,18 @@
     max-height: 200px;
     opacity: 1;
 }
-@media screen and (max-width: 1200px) {
-    .console-block {
-        padding-top: 20px;
-    }
-}
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1180px) {
     .console-block {
         width: 100%;
+        padding-top: 20px;
+        justify-content: center;
+    }
+    .terminal-mockup {
+        width: 800px;
     }
 }
 @media screen and (max-width: 900px) {
     .console-block {
-        padding-top: 5vh;
         margin-bottom: 30px;
     }
 }
