@@ -138,8 +138,8 @@
     position: absolute;
     height: 60px;
     width: 60px;
-    top: 10%;
-    right: 2%;
+    top: 15px;
+    right: 10px;
     z-index: 40;
     cursor: pointer;
     border-radius: 50%;

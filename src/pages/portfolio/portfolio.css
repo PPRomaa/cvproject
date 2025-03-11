@@ -23,17 +23,13 @@
     display: flex;
     font-size: 13px;
     position: relative;
-    /*width: 422px;*/
-    /*height: 100%;*/
     cursor: default;
     overflow: visible;
     border-radius: 20px;
 }
 
-.project-card img {
+.project-card-img {
     position: relative;
-    width: auto;
-    height: auto;
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
@@ -49,6 +45,7 @@
     z-index: 2;
     overflow: hidden;
     border-radius: 20px;
+    background-color: #202020
 }
 
 .project-card-info {
@@ -77,6 +74,7 @@
 }
 .project-card:hover img {
     filter: brightness(1);
+    background-color: #000;
 }
 .project-card:hover .project-card-item {
     transform: translate(-20px, -10px);
@@ -145,14 +143,14 @@
 .project-card__list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     align-items: center;
+    gap: 5px;
     padding: 5px 5px 20px 5px;
 }
 .project-card__item {
     font-size: 14px;
     list-style: none;
-    padding: 5px 15px 2px 15px;
+    padding: 5px 15px 5px 15px;
     margin: 4px 0;
     border-radius: 20px;
     background-color: #000;

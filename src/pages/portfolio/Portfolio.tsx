@@ -13,17 +13,17 @@ export const Portfolio: React.FC = () => {
                     <ResponsiveMasonry
                         columnsCountBreakPoints={{ 350: 1, 666: 2, 1024: 3 }}>
                         <Masonry gutter={'20px'}>
-                            {projectsData.map(
-                                (
-                                    { img, name, url, skills, desc, link },
-                                    index
-                                ) => {
+                            {projectsData.map(({ img, name, url, skills, desc, link }, index) => {
                                     return (
                                         <div
                                             key={index + name}
                                             className="project-card">
                                             <div className="project-card-item">
-                                                <img src={img} alt={name} />
+                                                <img
+                                                    className="project-card-img"
+                                                    src={img}
+                                                    alt={name}
+                                                />
                                                 <div className="project-card-info">
                                                     <p className="card-title">
                                                         {' '}
