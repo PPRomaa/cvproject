@@ -29,12 +29,12 @@ export const Navigation: React.FC = () => {
 
     useEffect(() => {
         if (active !== '') {
-            const timer = setInterval(() => {
+            const timer = setTimeout(() => {
                 setActive('')
                 setToggle(false)
-            }, 1000)
+            }, 500)
             return () => {
-                clearInterval(timer)
+                clearTimeout(timer)
             }
         }
     }, [active])
@@ -70,21 +70,19 @@ export const Navigation: React.FC = () => {
                 <div className={`Nav-links_list ${toggle ? 'active' : ''}`}>
                     <div
                         className={`Blue_line ${animated ? 'hide' : ''}`}></div>
-                    <ul className="Nav-links">
+                    <div className="Nav-links">
                         {headerMenuList.map(({ link, title, key: id }) => (
-                            <li
-                                className={`Nav-link ${active === title || location.pathname === `${link}` ? 'active' : ''}`}
-                                key={id + title}>
                                 <Link
+                                    className={`Nav-link ${active === title || location.pathname === `${link}` ? 'active' : ''}`}
+                                    key={id + title}
                                     to={link}
                                     onClick={() => {
                                         setActive(title)
                                     }}>
                                     {title}
                                 </Link>
-                            </li>
                         ))}
-                    </ul>
+                    </div>
                     <LinkComponent
                         style={{
                             flexDirection: 'row',

@@ -31,7 +31,6 @@ const projectsData: ProjectsData[] = [
         url: 'https://github.com/PPRomaa/RecipeApp',
         skills: [
             'React Native',
-            'UI/UX',
             'TypeScript',
             'Redux Toolkit',
             'React Navigation',

@@ -6,7 +6,7 @@
   margin: 0;
   background-color: #202020;
   overflow: hidden;
-  scrollbar-color: #005cb3 #000000;
+  scrollbar-color: #005cb3 #202020;
 
   display: flex;
   flex-direction: column;
