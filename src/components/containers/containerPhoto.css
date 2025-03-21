@@ -14,7 +14,7 @@
     margin: 0 auto;
 }
 .photo-container {
-    background-image: url("/src/assets/images/my-image.png");
+    background-image: url("/src/assets/images/main-image.webp");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom center;

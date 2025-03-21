@@ -74,8 +74,7 @@ const FirstSection: React.FC = () => {
                         backgroundColor="rgba(0,0,0,0)"
                         showAtmosphere
                         showGraticules
-                        globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
-                        bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
+                        globeImageUrl="//cdn.jsdelivr.net/npm/three-globe/example/img/earth-night.jpg"
                         labelsData={[
                             {
                                 lat: 48.6,
