@@ -159,7 +159,7 @@ const SecondSection: React.FC = () => {
     return (
         <section className="second-section">
             <div className="icon-section" ref={leftSection}>
-                <Marquee autoFill pauseOnHover speed={80}>
+                <Marquee autoFill speed={80}>
                     <div className="icon-section__items">
                         {arrIcons.map(({ title, logo }) => (
                             <div
