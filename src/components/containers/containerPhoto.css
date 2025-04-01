@@ -1,11 +1,11 @@
-.main-photo-container {
+.main__photo-container {
     display: flex;
     width: 50%;
     justify-content: center;
     align-items: flex-end;
     height: 100%;
 }
-.photo-section {
+.photo__section {
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -13,7 +13,7 @@
     width: 100%;
     margin: 0 auto;
 }
-.photo-container {
+.photo__container {
     background-image: url("/src/assets/images/main-image.webp");
     background-size: contain;
     background-repeat: no-repeat;
@@ -23,13 +23,13 @@
 }
 
 @media screen and (min-width: 1600px) {
-    .main-photo-container {
+    .main__photo-container {
         width: calc(100% + 200px);
     }
 }
 
 @media screen and (max-width: 1024px) {
-    .main-photo-container {
+    .main__photo-container {
         width: 100%;
         justify-content: center;
         align-items: flex-end;

@@ -57,7 +57,7 @@ const Contacts: React.FC = () => {
     })
 
     return (
-        <section className="contact-body">
+        <>
             <div className="contact-main-block">
                 <div className="contact-talk-container">
                     <h3>Let&#39;s talk</h3>
@@ -134,7 +134,7 @@ const Contacts: React.FC = () => {
                 </form>
                 <LinkComponent style={{ justifyContent: 'center' }} />
             </div>
-        </section>
+        </>
     )
 }
 export { Contacts }

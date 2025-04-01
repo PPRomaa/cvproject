@@ -6,7 +6,7 @@ import './portfolio.css'
 
 export const Portfolio: React.FC = () => {
     return (
-        <main className="main-container">
+        <>
             <section className="main-section">
                 <h1 className="base-title">Some Works</h1>
                 <div className="projects-container">
@@ -93,6 +93,6 @@ export const Portfolio: React.FC = () => {
                     </ResponsiveMasonry>
                 </div>
             </section>
-        </main>
+        </>
     )
 }

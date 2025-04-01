@@ -6,11 +6,14 @@ import './home.css'
 
 export const Home: React.FC = () => {
     return (
-        <main className="about__page-wrapper">
-            <div className="home-wrapper">
+        <>
+            <div className="home__wrapper">
                 <NameContainer />
                 <PhotoContainer />
             </div>
-        </main>
+            {/*<div className="bottom__wrapper">*/}
+            {/*    <div className="bottom__blue-element"></div>*/}
+            {/*</div>*/}
+        </>
     )
 }

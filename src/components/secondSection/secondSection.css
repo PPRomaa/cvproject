@@ -9,7 +9,7 @@
 .skills-section {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    padding: 0 40px;
 }
 .skills-section__block {
     opacity: 0;
@@ -81,6 +81,11 @@
 @media screen and (max-width: 950px){
     .second-section {
         gap: 10px;
+    }
+}
+@media screen and (max-width: 720px) {
+    .skills-section {
+        padding: 0 20px;
     }
 }
 @media screen and (max-width: 500px){

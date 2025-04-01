@@ -4,9 +4,9 @@ import './containerPhoto.css'
 
 const PhotoContainer: React.FC = () => {
     return (
-        <section className="main-photo-container">
-            <div className="photo-section">
-                <div className="photo-container"></div>
+        <section className="main__photo-container">
+            <div className="photo__section">
+                <div className="photo__container"></div>
             </div>
         </section>
     )
