@@ -173,7 +173,7 @@ const SecondSection: React.FC = () => {
             </div>
             <div className="skills-section" ref={rightSection}>
                 <div
-                    className={`skills-section__block ${rightSectionIsVisible ? 'visible' : ''}`}>
+                    className={`skills-section__block ${rightSectionIsVisible ? 'visible__block' : ''}`}>
                     <h1 className="skills-section__title">
                         Professional Skills
                     </h1>

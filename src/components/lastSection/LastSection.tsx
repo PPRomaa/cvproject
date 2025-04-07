@@ -50,11 +50,10 @@ const LastSection: React.FC = () => {
 
     return (
         <section className="last-section" ref={leftSection}>
-            <div
-                className={`main-question__section ${leftSectionIsVisible ? 'visible' : ''}`}>
+            <div className={`main-question__section ${leftSectionIsVisible ? 'visible' : ''}`}>
                 <div className="main-question__block">
-                    <div className="main-question__tittle">
-                        <h1>Why Choose Me?</h1>
+                    <div className="main-question__tittle-block">
+                        <h1 className="main-question__tittle">Why Choose Me?</h1>
                     </div>
                 </div>
                 <div className="main-question__list">
@@ -64,7 +63,7 @@ const LastSection: React.FC = () => {
                         spaceBetween={20}
                         pagination={{ clickable: true }}
                         navigation
-                        style={{ width: '100%' }}
+                        style={{ width: '90%' }}
                         breakpoints={{
                             800: {
                                 slidesPerView: 3,
@@ -84,9 +83,9 @@ const LastSection: React.FC = () => {
                                     <div className="question-item__title">
                                         {icon}
                                     </div>
-                                    <div className="question-item__body">
+                                    <h2 className="question-item__subtitle">
                                         {question}
-                                    </div>
+                                    </h2>
                                 </div>
                             </SwiperSlide>
                         ))}

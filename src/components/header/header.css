@@ -1,11 +1,14 @@
 .App-header {
-    position: relative;
+    position: fixed;
 
     width: 100%;
-    min-height: 90px;
+    height: 90px;
     text-align: center;
 
     font-size: calc(10px + 2vmin);
+    box-shadow: rgba(0, 0, 0, 0.25) 2px 2px 2.6px;
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
     z-index: 99;
 }
 .App-wrapper {

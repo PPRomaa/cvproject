@@ -66,7 +66,10 @@
 .faq-question {
     width: 90%;
     margin: 0;
-    font-size: 18px;
+    color: #b9b9b9;
+    line-height: 1.3em;
+    font-size: 1.2em;
+    font-weight: 400;
 }
 .arrow-icon {
     position: absolute;
@@ -86,8 +89,10 @@
     overflow: hidden;
     opacity: 0;
     transition: max-height 0.3s ease, opacity 0.3s ease;
-    color: #dcdcdc;
-
+    line-height: 1.3em;
+    color: #a7a7a7;
+    font-weight: 300;
+    font-size: 1em;
 }
 
 .faq-answer.active {
@@ -126,10 +131,5 @@
     }
     .body-block {
         font-size: 12px;
-    }
-}
-@media screen and (max-width: 380px) {
-    .console-block {
-        padding-top: 0;
     }
 }

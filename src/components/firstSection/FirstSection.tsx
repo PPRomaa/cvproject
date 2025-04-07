@@ -47,9 +47,9 @@ const FirstSection: React.FC = () => {
                     </h3>
                 </div>
                 <div className="first-section__tech-stack">
-                    <h1 className="first-section__tech-stack-title">
+                    <h2 className="first-section__tech-stack-title">
                         Tech Stack
-                    </h1>
+                    </h2>
                     <h3 className="first-section__tech-stack-description">
                         I specialize in JavaScript/TypeScript with a focus on
                         React and Next.js ecosystems. In the future, I would
@@ -59,13 +59,14 @@ const FirstSection: React.FC = () => {
                 </div>
             </div>
             <QuestionsContainer />
-            <div className="globe-block">
-                <div className="globe-description">
-                    <h1>I work remotely across most timezones</h1>
-                    <h3>
+            <div className="globe__block">
+                <div className="globe__description">
+                    <h1 className="globe__description-title">I work remotely across most timezones</h1>
+                    <h3 className="globe__description-subtitle">
                         Now i&#39;m based in Slovakia, with remote work
                         available. ✅
                     </h3>
+                    <hr/>
                 </div>
                 {showGlobe ? (
                     <Globe

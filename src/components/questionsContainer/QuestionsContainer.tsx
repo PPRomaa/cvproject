@@ -26,10 +26,6 @@ const questionsList: IQuestions[] = [
         answer: 'I use libraries such as React Transition Group to create smooth and attractive animations.',
     },
     {
-        question: 'Can you work with the API?',
-        answer: 'Yes, I have integrated REST API and GraphQL into React apps using Axios, Fetch API.',
-    },
-    {
         question: 'How do you optimize the performance of React apps?',
         answer: 'I use memoization (React.memo, useMemo, useCallback), rendering optimization, code splitting, and lazy loading to improve performance.',
     },

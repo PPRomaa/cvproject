@@ -41,7 +41,7 @@ export const Header: React.FC = () => {
                         className="App_logo"
                         onClick={() => setIsVisible(true)}>
                         <span className="tag-color">&lt;</span>
-                        <span>PPRoman</span>
+                        <span>CodeWalker</span>
                         <span className="tag-color">/&gt;</span>
                     </Link>
                 </div>

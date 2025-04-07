@@ -6,6 +6,7 @@ import LinkComponent from '../../components/links/LinkComponent'
 import { basicSchema } from '../../schemas'
 
 import './contacts.css'
+import {RootContainer} from "../../components/containers/RootContainer";
 
 type ContactValues = {
     name: string
@@ -58,8 +59,8 @@ const Contacts: React.FC = () => {
 
     return (
         <>
-            <div className="contact-main-block">
-                <div className="contact-talk-container">
+            <div className="contact__main-block">
+                <div className="contact__talk-container">
                     <h3>Let&#39;s talk</h3>
                     <p>
                         If you&#39;re looking for a new developer to join your
@@ -70,8 +71,8 @@ const Contacts: React.FC = () => {
                 <form
                     onSubmit={handleSubmit}
                     autoComplete={'off'}
-                    className="contact-form-body">
-                    <label className="form-label">
+                    className="contact__form-body">
+                    <label className="form__label">
                         <span>Full Name</span>
                         <input
                             type="text"
@@ -81,7 +82,7 @@ const Contacts: React.FC = () => {
                             onBlur={handleBlur}
                             required
                             placeholder="John Doe"
-                            className={`form-control ${errors.name && touched.name ? 'error' : ''}`}
+                            className={`form__control ${errors.name && touched.name ? 'error' : ''}`}
                         />
                         {errors.name && touched.name ? (
                             <span style={{ color: 'tomato' }}>
@@ -89,7 +90,7 @@ const Contacts: React.FC = () => {
                             </span>
                         ) : null}
                     </label>
-                    <label className="form-label">
+                    <label className="form__label">
                         <span>Email</span>
                         <input
                             type="email"
@@ -99,7 +100,7 @@ const Contacts: React.FC = () => {
                             onBlur={handleBlur}
                             required
                             placeholder="johndoe@gmail.com"
-                            className={`form-control ${errors.email && touched.email ? 'error' : ''}`}
+                            className={`form__control ${errors.email && touched.email ? 'error' : ''}`}
                         />
                         {errors.email && touched.email ? (
                             <span style={{ color: 'tomato' }}>
@@ -107,7 +108,7 @@ const Contacts: React.FC = () => {
                             </span>
                         ) : null}
                     </label>
-                    <label className="form-label">
+                    <label className="form__label">
                         <span>Your message</span>
                         <textarea
                             id="message"
@@ -117,7 +118,7 @@ const Contacts: React.FC = () => {
                             required
                             rows={5}
                             placeholder="Hi, I wanna give you a job..."
-                            className={`form-control textarea ${errors.message && touched.message ? 'error' : ''}`}
+                            className={`form__control textarea ${errors.message && touched.message ? 'error' : ''}`}
                         />
                         {errors.message && touched.message ? (
                             <span style={{ color: 'tomato' }}>
@@ -128,12 +129,14 @@ const Contacts: React.FC = () => {
                     <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="form-btn">
+                        className="form__btn">
                         {isSubmitting ? 'Sending...' : 'Send Message'}
                     </button>
                 </form>
-                <LinkComponent style={{ justifyContent: 'center' }} />
+                <LinkComponent style={{ justifyContent: 'center', paddingBottom: '40px' }} />
             </div>
+            <hr/>
+            <RootContainer />
         </>
     )
 }
