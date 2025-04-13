@@ -1,16 +1,15 @@
-import React from "react";
+import React from 'react'
 
-import image from "../../assets/images/my-image.png"
-import "./containerPhoto.css"
+import './containerPhoto.css'
 
-const PhotoContainer:React.FC = () => {
+const PhotoContainer: React.FC = () => {
     return (
-        <section className="main-photo-container">
-            <div className="photo-container">
-                <img src={image} alt="my-image" />
+        <section className="main__photo-container">
+            <div className="photo__section">
+                <div className="photo__container"></div>
             </div>
         </section>
     )
 }
 
-export  {PhotoContainer};
+export { PhotoContainer }

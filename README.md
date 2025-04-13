@@ -23,10 +23,8 @@ To set up and run the portfolio website locally, follow these steps:
 
 2. Install dependencies: `npm install`
 
-3. Start the development server:  `npm start`
+3. Start the development server: `npm start`
 
 4. The website will be available at http://localhost:3000.
 
-
 ## Thank you for checking out my portfolio!
-

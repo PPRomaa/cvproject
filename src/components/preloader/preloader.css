@@ -1,38 +1,37 @@
-@keyframes slideIn {
-    from {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-@keyframes slideOut {
-    from {
-        transform: translateY(0);
-        opacity: 1;
-    }
-    to {
-        transform: translateY(100%);
-        opacity: 0;
-    }
-}
-
 .Preloader-container {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3vh;
     background-color: #005cb3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     z-index: 100;
-    animation: slideIn 0.7s ease forwards;
+    animation: slideInOut 0.5s ease forwards, slideOut 0.5s ease forwards 0.5s, slideGoUp 0.5s ease forwards 1s;;
 }
 
-.Preloader-container.hide {
-    animation: slideOut 0.7s ease forwards;
+@keyframes slideInOut {
+    from {
+        width: 0;
+    }
+    to {
+        width: 200vw;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        height: 5vh;
+    }
+    to {
+        height: 100vh;
+    }
+}
+@keyframes slideGoUp {
+    from {
+        transform: translateX(-50%) translateY(0);
+    }
+    to {
+        transform: translateX(-50%) translateY(-100%);
+    }
 }

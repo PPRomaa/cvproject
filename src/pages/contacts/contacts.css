@@ -1,55 +1,51 @@
-.contact-body {
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-    overflow-y: scroll;
-}
-.contact-main-block {
+.contact__main-block {
     max-width: 600px;
-    padding: 0 40px;
+    padding: 100px 40px 0 40px;
     margin-bottom: 40px;
     gap: 25px;
 
     display: flex;
     flex-direction: column;
     justify-self: center;
+    justify-content: center;
+    align-self: center;
 }
 
-.contact-talk-container {
+.contact__talk-container {
     display: flex;
     flex-direction: column;
-    font-family: monospace;
 }
 
-.contact-talk-container h3 {
-    margin: 30px 0 0;
-    font-size: 2.25rem;
+.contact__talk-container > h3 {
+    font-size: 2.25em;
     line-height: 2.5rem;
+    margin: 30px 0 0;
 }
-.contact-talk-container p {
-    letter-spacing: 1px;
-    color: #d4d4d4;
+.contact__talk-container > p {
+    color: #b9b9b9;
     margin: 12px 0 0;
-    font-size: 0.80rem;
+    line-height: 1.3em;
+    font-size: 1em;
+    letter-spacing: 1px;
+    font-weight: 300;
 }
-.contact-form-body {
+.contact__form-body {
     margin-top: 12px;
     display: flex;
     flex-direction: column;
 }
-.form-label {
+.form__label {
     margin-top: 12px;
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
-.form-label span{
+.form__label span{
     font-size: 0.80rem;
-    font-family: monospace;
     color: #d4d4d4;
 }
 
-.form-control {
+.form__control {
     min-height: 3.5rem;
     max-width: 100%;
     padding: 10px 16px;
@@ -72,7 +68,7 @@
     color: tomato;
     border:1px solid tomato;
 }
-.form-btn {
+.form__btn {
     display: block;
     text-align: center;
     border: none;
@@ -82,25 +78,27 @@
     width: 100%;
     padding: 15px 20px;
 
-    font-size: 1rem;
-    font-weight: bold;
+    font-size: 1em;
+    line-height: 1.3em;
+    font-weight: 400;
     color: #ffffff;
     background-color:  #005cb3;
 
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-.form-btn:hover {
+.form__btn:hover {
+    color: #d4d4d4;
     background-color: #3c3c49;
 }
-.form-btn:disabled {
+.form__btn:disabled {
     opacity: 0.35;
     background-color: #3c3c49;
     cursor: default;
 }
 
 @media (max-width: 720px) {
-    .contact-main-block {
-        padding: 0 20px;
+    .contact__main-block {
+        padding: 100px 20px 0 20px;
     }
 }
